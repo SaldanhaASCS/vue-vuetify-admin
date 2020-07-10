@@ -102,7 +102,7 @@ export default {
           }
         },
         {
-          icon: 'mdi-settings',
+          icon: 'mdi-cog',
           href: '#',
           title: 'toolbar.settings',
           click: () => {
