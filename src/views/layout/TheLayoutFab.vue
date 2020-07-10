@@ -12,7 +12,7 @@
       class="layout-fab__btn"
       @click="toggleSettingsPanel"
     >
-      <v-icon>mdi-settings</v-icon>
+      <v-icon>mdi-cog</v-icon>
     </v-btn>
     <v-navigation-drawer
       right
