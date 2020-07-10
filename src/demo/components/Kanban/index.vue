@@ -60,45 +60,45 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import draggable from 'vuedraggable';
+import { mapGetters } from 'vuex'
+import draggable from 'vuedraggable'
 
 export default {
   name: 'Kanban',
   components: {
-    draggable,
+    draggable
   },
   props: {
     headerText: {
       type: String,
-      default: 'Header',
+      default: 'Header'
     },
     headerColor: {
       type: String,
-      default: 'pink',
+      default: 'pink'
     },
     options: {
       type: Object,
-      default() {
-        return {};
-      },
+      default () {
+        return {}
+      }
     },
     list: {
       type: Array,
-      default() {
-        return [];
-      },
-    },
+      default () {
+        return []
+      }
+    }
   },
   computed: {
     ...mapGetters([
-      'toolbarDense',
-    ]),
+      'toolbarDense'
+    ])
   },
   methods: {
     log: (evt) => {
-      window.console.log(evt);
-    },
-  },
-};
+      window.console.log(evt)
+    }
+  }
+}
 </script>

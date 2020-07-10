@@ -56,15 +56,15 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Parallax',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
-    page: 1,
-  }),
-};
+    page: 1
+  })
+}
 </script>

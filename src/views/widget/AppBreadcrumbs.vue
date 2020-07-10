@@ -13,59 +13,59 @@
 </template>
 
 <script>
-const pathToRegexp = require('path');
+const pathToRegexp = require('path')
 
 export default {
   name: 'AppBreadcrumbs',
   data: () => ({
-    levelList: null,
+    levelList: null
   }),
   watch: {
-    $route() {
-      this.getBreadcrumb();
-    },
+    $route () {
+      this.getBreadcrumb()
+    }
   },
-  created() {
-    this.getBreadcrumb();
+  created () {
+    this.getBreadcrumb()
   },
   methods: {
-    generateTitle(title) {
-      const hasKey = this.$te(`${title}`);
+    generateTitle (title) {
+      const hasKey = this.$te(`${title}`)
       if (hasKey) {
-        const translatedTitle = this.$t(`${title}`);
-        return translatedTitle;
+        const translatedTitle = this.$t(`${title}`)
+        return translatedTitle
       }
-      return title;
+      return title
     },
-    getBreadcrumb() {
-      let matched = this.$route.matched.filter((item) => item.name);
+    getBreadcrumb () {
+      let matched = this.$route.matched.filter((item) => item.name)
 
-      const first = matched[0];
+      const first = matched[0]
       if (first && first.name.trim().toLocaleLowerCase() !== 'dashboard') {
-        matched = [{ path: '/dashboard', meta: { title: 'route.dashboard' } }].concat(matched);
+        matched = [{ path: '/dashboard', meta: { title: 'route.dashboard' } }].concat(matched)
       }
 
-      this.levelList = matched.filter((item) => item.meta
-        && item.meta.title && item.meta.breadcrumb !== false);
+      this.levelList = matched.filter((item) => item.meta &&
+        item.meta.title && item.meta.breadcrumb !== false)
     },
-    pathCompile(path) {
-      const { params } = this.$route;
-      const toPath = pathToRegexp.compile(path);
-      return toPath(params);
+    pathCompile (path) {
+      const { params } = this.$route
+      const toPath = pathToRegexp.compile(path)
+      return toPath(params)
     },
-    handleLink(item) {
-      console.groupCollapsed('handleLink');
-      const { redirect, path } = item;
-      console.log(`redirect=${redirect}, path=${path}`);
+    handleLink (item) {
+      console.groupCollapsed('handleLink')
+      const { redirect, path } = item
+      console.log(`redirect=${redirect}, path=${path}`)
       if (redirect) {
-        console.log('redirect');
-        this.$router.push(redirect);
-        console.groupEnd();
-        return;
+        console.log('redirect')
+        this.$router.push(redirect)
+        console.groupEnd()
+        return
       }
-      this.$router.push(this.pathCompile(path));
-      console.groupEnd();
-    },
-  },
-};
+      this.$router.push(this.pathCompile(path))
+      console.groupEnd()
+    }
+  }
+}
 </script>

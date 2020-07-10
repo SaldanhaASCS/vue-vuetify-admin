@@ -297,7 +297,6 @@
               </v-row>
               <v-row
 
-
                 class="mt-5"
               >
                 <v-col cols="12">
@@ -349,7 +348,6 @@
               class="pa-0 container--fluid"
             >
               <v-row
-
 
                 align="center"
               >
@@ -632,12 +630,12 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Buttons',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     text: 'center',
@@ -650,20 +648,20 @@ export default {
     loading: false,
     loading2: false,
     loading3: false,
-    loading4: false,
+    loading4: false
   }),
   watch: {
-    loader() {
-      const l = this.loader;
-      this[l] = !this[l];
+    loader () {
+      const l = this.loader
+      this[l] = !this[l]
 
       setTimeout(() => {
-        this[l] = false;
-      }, 3000);
-      this.loader = null;
-    },
-  },
-};
+        this[l] = false
+      }, 3000)
+      this.loader = null
+    }
+  }
+}
 </script>
 
 <style>

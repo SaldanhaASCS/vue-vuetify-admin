@@ -20,29 +20,29 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import themes from '@/plugins/vuetifyThemes';
+import { mapGetters } from 'vuex'
+import themes from '@/plugins/vuetifyThemes'
 
 export default {
   name: 'AppTheme',
   props: {
     cols: {
       type: String,
-      default: '6',
-    },
+      default: '6'
+    }
   },
   data: () => ({
-    themes,
+    themes
   }),
   computed: {
     ...mapGetters([
-      'themeIndex',
-    ]),
+      'themeIndex'
+    ])
   },
   methods: {
-    toggleTheme(index) {
-      this.$store.dispatch('ThemeToggle', { index, vuetify: this.$vuetify });
-    },
-  },
-};
+    toggleTheme (index) {
+      this.$store.dispatch('ThemeToggle', { index, vuetify: this.$vuetify })
+    }
+  }
+}
 </script>

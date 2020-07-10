@@ -227,28 +227,28 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Progress',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     interval: {},
-    value: 0,
+    value: 0
   }),
-  beforeDestroy() {
-    clearInterval(this.interval);
+  beforeDestroy () {
+    clearInterval(this.interval)
   },
-  mounted() {
+  mounted () {
     this.interval = setInterval(() => {
       if (this.value === 100) {
-        return (this.value === 0);
+        return (this.value === 0)
       }
-      this.value += 10;
-      return false;
-    }, 1000);
-  },
-};
+      this.value += 10
+      return false
+    }, 1000)
+  }
+}
 </script>

@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'TheLayoutFooter',
@@ -47,14 +47,14 @@ export default {
       'mdi-home',
       'mdi-email',
       'mdi-calendar',
-      'mdi-delete',
-    ],
+      'mdi-delete'
+    ]
   }),
   computed: {
     ...mapGetters([
-      'footerShow',
-    ]),
+      'footerShow'
+    ])
   },
-  methods: {},
-};
+  methods: {}
+}
 </script>

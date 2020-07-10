@@ -1,16 +1,16 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    node: true
   },
   extends: [
     'plugin:vue/essential',
     'plugin:vue/strongly-recommended',
     'plugin:vue/recommended',
-    '@vue/airbnb',
+    '@vue/standard'
   ],
   plugins: [
-    'vuetify',
+    'vuetify'
   ],
   rules: {
     'no-console': 'off', // 'warn',
@@ -36,12 +36,14 @@ module.exports = {
     'vue/script-indent': 'warn',
     'vue/space-infix-ops': 'warn',
     'vue/space-unary-ops': 'warn',
-    'vue/v-on-function-call': 'warn',
+    'vue/v-on-function-call': 'off',
     'vuetify/no-deprecated-classes': 'warn',
     'vuetify/grid-unknown-attributes': 'warn',
     'vuetify/no-legacy-grid': 'warn',
+    'template-curly-spacing': 'off',
+    indent: 'off'
   },
   parserOptions: {
-    parser: 'babel-eslint',
-  },
-};
+    parser: 'babel-eslint'
+  }
+}

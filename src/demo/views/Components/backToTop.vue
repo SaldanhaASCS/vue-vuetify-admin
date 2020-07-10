@@ -134,8 +134,8 @@
 <script>
 export default {
   name: 'BackToTopDemo',
-  data: () => ({}),
-};
+  data: () => ({})
+}
 </script>
 
 <style scoped>

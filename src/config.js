@@ -1,4 +1,4 @@
-const packageJson = require('../package.json');
+const packageJson = require('../package.json')
 
 module.exports = {
   title: packageJson.title,
@@ -40,21 +40,21 @@ module.exports = {
     navbar: {
       show: true,
       dense: false,
-      logo: false,
+      logo: false
     },
     fullscreen: {
       show: false,
-      btn: true,
+      btn: true
     },
     settingsPanel: {
       show: false,
-      btn: true,
+      btn: true
     },
     theme: {
       index: 0,
-      dark: false,
-    },
-  },
+      dark: false
+    }
+  }
 
   /**
    * @type {boolean} true | false
@@ -64,4 +64,4 @@ module.exports = {
    * If you want to also use it in dev, you can pass ['production', 'development']
    */
   // errorLog: 'production',
-};
+}

@@ -272,8 +272,8 @@ export default {
   name: 'Cards',
   data: () => ({
     show: true,
-    cardText: 'Hey there, I am a very simple card. I am good at containing small bits of '
-      + 'information. I am quite convenient because I require little markup to use effectively.',
-  }),
-};
+    cardText: 'Hey there, I am a very simple card. I am good at containing small bits of ' +
+      'information. I am quite convenient because I require little markup to use effectively.'
+  })
+}
 </script>

@@ -78,13 +78,13 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Typography',
   components: {
-    AppWidget,
+    AppWidget
   },
-  data: () => ({}),
-};
+  data: () => ({})
+}
 </script>

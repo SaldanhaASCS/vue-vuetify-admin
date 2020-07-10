@@ -278,13 +278,13 @@
 </template>
 
 <script>
-import { lorem, landingInfo } from '@/api/mock';
+import { lorem, landingInfo } from '@/api/mock'
 
 export default {
   name: 'Landing',
   data: () => ({
     info: landingInfo,
-    lorem,
-  }),
-};
+    lorem
+  })
+}
 </script>

@@ -20,27 +20,27 @@
 </template>
 
 <script>
-import Driver from 'driver.js'; // import driver.js
-import 'driver.js/dist/driver.min.css'; // import driver.js css
-import steps from './defineSteps';
-import AppCenter from '@/views/widget/AppCenter.vue';
+import Driver from 'driver.js' // import driver.js
+import 'driver.js/dist/driver.min.css' // import driver.js css
+import AppCenter from '@/views/widget/AppCenter.vue'
+import steps from './defineSteps'
 
 export default {
   name: 'Guide',
   components: {
-    AppCenter,
+    AppCenter
   },
   data: () => ({
-    driver: null,
+    driver: null
   }),
-  mounted() {
-    this.driver = new Driver();
+  mounted () {
+    this.driver = new Driver()
   },
   methods: {
-    guide() {
-      this.driver.defineSteps(steps);
-      this.driver.start();
-    },
-  },
-};
+    guide () {
+      this.driver.defineSteps(steps)
+      this.driver.start()
+    }
+  }
+}
 </script>

@@ -38,29 +38,29 @@
 </template>
 
 <script>
-import items from '@/api/mock_order';
+import items from '@/api/mock_order'
 
 export default {
   data: () => ({
     headers: [
       {
-        text: '#', align: 'left', sortable: false, value: 'id',
+        text: '#', align: 'left', sortable: false, value: 'id'
       },
       { text: 'Product', value: 'deadline' },
       { text: 'Price', value: 'progress' },
-      { text: 'Status', value: 'status' },
+      { text: 'Status', value: 'status' }
     ],
     items,
     colors: {
       processing: 'blue',
       sent: 'red',
-      delivered: 'green',
-    },
+      delivered: 'green'
+    }
   }),
   methods: {
-    getColorByStatus(status) {
-      return this.colors[status];
-    },
-  },
-};
+    getColorByStatus (status) {
+      return this.colors[status]
+    }
+  }
+}
 </script>

@@ -12,7 +12,7 @@ export default {
   permission: {
     admin: '管理员',
     editor: '编辑者',
-    visitor: '访问者',
+    visitor: '访问者'
   },
   components: '组件',
   component: {
@@ -25,7 +25,7 @@ export default {
     markdown: 'Markdown',
     splitPane: '分隔栏',
     sticky: '黏贴(Sticky)',
-    tinymce: '富文本编辑(Tinymce)',
+    tinymce: '富文本编辑(Tinymce)'
   },
   vuetify: 'Vuetify UI',
   vuetifyComponents: {
@@ -53,7 +53,7 @@ export default {
     tables: '表格/Tables',
     timepicker: '时间选择/Timepicker',
     tooltip: '提示信息/Tooltip',
-    typography: '版式/Typography',
+    typography: '版式/Typography'
   },
   errors: '错误',
   errorPages: {
@@ -61,20 +61,20 @@ export default {
     page401: '401',
     page403: '403',
     page404: '404',
-    page500: '500',
+    page500: '500'
   },
   charts: '图表',
   chart: {
     keyboardChart: '柱状图表',
     lineChart: '曲线图',
-    mixChart: '混合图表',
+    mixChart: '混合图表'
   },
   nested: {
     nested: '嵌套',
     nested1: '一级',
     nested2: '二级',
-    nested3: '三级',
+    nested3: '三级'
   },
   clipboard: '剪切板',
-  externalLink: '外部链接',
-};
+  externalLink: '外部链接'
+}

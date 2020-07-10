@@ -37,47 +37,47 @@
 </template>
 
 <script>
-import CountTo from 'vue-count-to';
+import CountTo from 'vue-count-to'
 
 export default {
   name: 'PanelGroupItem',
   components: {
-    CountTo,
+    CountTo
   },
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     icon: {
       type: String,
-      required: true,
+      required: true
     },
     color: {
       type: String,
-      required: true,
+      required: true
     },
     chart: {
       type: String,
-      required: true,
+      required: true
     },
     start: {
       type: Number,
-      required: true,
+      required: true
     },
     end: {
       type: Number,
-      required: true,
+      required: true
     },
     duration: {
       type: Number,
-      required: true,
-    },
+      required: true
+    }
   },
   methods: {
-    handleSetLineChartData(type) {
-      this.$parent.$emit('handleSetLineChartData', type);
-    },
-  },
-};
+    handleSetLineChartData (type) {
+      this.$parent.$emit('handleSetLineChartData', type)
+    }
+  }
+}
 </script>

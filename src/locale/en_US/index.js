@@ -1,5 +1,5 @@
-import route from './route';
-import components from '@/demo/locale/en_US/components';
+import components from '@/demo/locale/en_US/components'
+import route from './route'
 
 export default {
   route,
@@ -8,7 +8,7 @@ export default {
     appname: 'Application',
     settings: 'Settings',
     profile: 'Profile',
-    logout: 'Logout',
+    logout: 'Logout'
   },
   settings: {
     title: 'Theme Settings',
@@ -21,7 +21,7 @@ export default {
     navbarDense: 'Navbar dense',
     navbarLogo: 'Navbar logo',
     settingsBtn: 'Setting btn',
-    footer: 'Footer',
+    footer: 'Footer'
   },
   login: {
     titleIn: 'Sing In Form',
@@ -30,7 +30,7 @@ export default {
     singUp: 'Sing up',
     email: 'Email',
     password: 'Password',
-    confirm: 'Confirm',
+    confirm: 'Confirm'
   },
   errors: {
     whoops: 'Whoops',
@@ -39,12 +39,12 @@ export default {
     401: 'Unauthorized',
     403: 'Forbidden',
     404: 'Not Found',
-    500: 'Internal Server Error',
+    500: 'Internal Server Error'
   },
   guide: {
-    description: 'The guide page is useful for some people who entered the project for '
-      + 'the first time. You can briefly introduce the features of the project. Demo is based on',
-    button: 'Show Guide',
+    description: 'The guide page is useful for some people who entered the project for ' +
+      'the first time. You can briefly introduce the features of the project. Demo is based on',
+    button: 'Show Guide'
   },
   ui: {
     switch: 'Switch Language',
@@ -59,6 +59,6 @@ export default {
     accent: 'Accent',
     firstName: 'First Name',
     lastName: 'Last Name',
-    email: 'E-mail',
-  },
-};
+    email: 'E-mail'
+  }
+}

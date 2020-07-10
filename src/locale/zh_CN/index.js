@@ -1,5 +1,5 @@
-import route from './route';
-import components from '@/demo/locale/zh_CN/components';
+import components from '@/demo/locale/zh_CN/components'
+import route from './route'
 
 export default {
   route,
@@ -8,7 +8,7 @@ export default {
     appname: '我的应用',
     settings: '设置',
     profile: '资料',
-    logout: '退出',
+    logout: '退出'
   },
   settings: {
     title: '主题设置',
@@ -21,7 +21,7 @@ export default {
     navbarDense: '紧凑导航栏',
     navbarLogo: '导航栏Logo',
     settingsBtn: '设置按钮',
-    footer: '页脚',
+    footer: '页脚'
   },
   login: {
     titleIn: '登录',
@@ -30,7 +30,7 @@ export default {
     singUp: '注册',
     email: 'Email',
     password: '密码',
-    confirm: '确认',
+    confirm: '确认'
   },
   errors: {
     whoops: '哦嚯~!',
@@ -39,11 +39,11 @@ export default {
     401: '未授权访问',
     403: '禁止访问',
     404: '页面未找到',
-    500: '内部服务器错误',
+    500: '内部服务器错误'
   },
   guide: {
     description: '引导页对于第一次进入项目的人来说是很有用的. 你可以简单的介绍一下项目的特性. Demo是基于',
-    button: '显示引导信息',
+    button: '显示引导信息'
   },
   ui: {
     switch: '切换语言',
@@ -58,6 +58,6 @@ export default {
     accent: '强调',
     firstName: '名',
     lastName: '姓',
-    email: 'E-mail',
-  },
-};
+    email: 'E-mail'
+  }
+}

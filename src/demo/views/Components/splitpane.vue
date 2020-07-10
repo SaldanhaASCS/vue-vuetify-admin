@@ -54,17 +54,17 @@
 </template>
 
 <script>
-import splitPane from 'vue-splitpane';
+import splitPane from 'vue-splitpane'
 
 export default {
   name: 'SplitpaneDemo',
   components: { splitPane },
   methods: {
-    resize() {
-      console.log('resize');
-    },
-  },
-};
+    resize () {
+      console.log('resize')
+    }
+  }
+}
 </script>
 
 <style  scoped>

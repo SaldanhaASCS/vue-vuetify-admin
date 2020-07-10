@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { Projects } from '@/api/mock_project';
+import { Projects } from '@/api/mock_project'
 
 export default {
   data: () => ({
@@ -67,22 +67,22 @@ export default {
         text: '#',
         align: 'center',
         sortable: false,
-        value: 'avatar',
+        value: 'avatar'
       },
       {
         text: 'Name',
         align: 'left',
-        value: 'name',
+        value: 'name'
       },
       { text: 'Deadline', value: 'deadline' },
       { text: 'Progress', value: 'progress' },
-      { text: 'Action', value: 'action', align: 'right' },
-    ],
+      { text: 'Action', value: 'action', align: 'right' }
+    ]
   }),
   computed: {
-    projects() {
-      return Projects;
-    },
-  },
-};
+    projects () {
+      return Projects
+    }
+  }
+}
 </script>

@@ -32,12 +32,12 @@
 </template>
 
 <script>
-import steps from '@/api/roadmap';
+import steps from '@/api/roadmap'
 
 export default {
   name: 'Roadmap',
   data: () => ({
-    steps,
-  }),
-};
+    steps
+  })
+}
 </script>

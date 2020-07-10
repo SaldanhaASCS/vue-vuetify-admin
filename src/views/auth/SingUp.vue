@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import Localization from '../widget/AppLocalization.vue';
+import Localization from '../widget/AppLocalization.vue'
 
 export default {
   name: 'SingUp',
@@ -104,16 +104,16 @@ export default {
     model: {
       email: 'admin@vvadmin.io',
       password: 'password',
-      confirm: 'password',
-    },
+      confirm: 'password'
+    }
   }),
   methods: {
-    login() {
-      this.loading = true;
+    login () {
+      this.loading = true
       setTimeout(() => {
-        this.$router.push('/dashboard');
-      }, 1000);
-    },
-  },
-};
+        this.$router.push('/dashboard')
+      }, 1000)
+    }
+  }
+}
 </script>

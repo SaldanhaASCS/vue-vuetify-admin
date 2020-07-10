@@ -1,17 +1,17 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from 'vue'
+import Router from 'vue-router'
 
-import Layout from '@/views/layout/TheLayout.vue';
+import Layout from '@/views/layout/TheLayout.vue'
 
 /* Router Modules */
-import authRouter from './modules/auth';
-import errorsRouter from './modules/errors';
-import permissionRouter from './modules/permission';
-import vuetifyRouter from '@/demo/router/vuetify';
-import nestedRouter from '@/demo/router/nested';
-import componentsRouter from '@/demo/router/components';
+import vuetifyRouter from '@/demo/router/vuetify'
+import nestedRouter from '@/demo/router/nested'
+import componentsRouter from '@/demo/router/components'
+import authRouter from './modules/auth'
+import errorsRouter from './modules/errors'
+import permissionRouter from './modules/permission'
 
-Vue.use(Router);
+Vue.use(Router)
 
 /** note: sub-menu only appear when children.length>=1
  *  detail see  https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -40,7 +40,7 @@ export const constantRoutes = [
     path: '/landing',
     alias: '/land',
     component: () => import('@/views/auth/Landing.vue'),
-    hidden: true,
+    hidden: true
   },
   {
     path: '/',
@@ -52,10 +52,10 @@ export const constantRoutes = [
         component: () => import('@/views/components/Dashboard/index'),
         name: 'Dashboard',
         meta: {
-          title: 'route.dashboard', icon: 'mdi-view-dashboard', noCache: true, affix: true,
-        },
-      },
-    ],
+          title: 'route.dashboard', icon: 'mdi-view-dashboard', noCache: true, affix: true
+        }
+      }
+    ]
   },
   {
     path: '/',
@@ -66,10 +66,10 @@ export const constantRoutes = [
         component: () => import('@/views/components/Documentation'),
         name: 'Documentation',
         meta: {
-          title: 'route.documentation', icon: 'mdi-text-subject', noCache: true, affix: true,
-        },
-      },
-    ],
+          title: 'route.documentation', icon: 'mdi-text-subject', noCache: true, affix: true
+        }
+      }
+    ]
   },
   {
     path: '/',
@@ -80,10 +80,10 @@ export const constantRoutes = [
         component: () => import('@/views/components/Guide'),
         name: 'Guide',
         meta: {
-          title: 'route.guide', icon: 'mdi-near-me', noCache: true, affix: true,
-        },
-      },
-    ],
+          title: 'route.guide', icon: 'mdi-near-me', noCache: true, affix: true
+        }
+      }
+    ]
   },
   {
     path: '/',
@@ -97,10 +97,10 @@ export const constantRoutes = [
           title: 'route.roadmap',
           icon: 'mdi-timeline-text',
           noCache: true,
-          affix: true,
-        },
-      },
-    ],
+          affix: true
+        }
+      }
+    ]
   },
   {
     path: '/',
@@ -110,9 +110,9 @@ export const constantRoutes = [
         path: '/theme',
         component: () => import('@/views/components/Theme.vue'),
         name: 'Theme',
-        meta: { title: 'route.theme', icon: 'mdi-palette' },
-      },
-    ],
+        meta: { title: 'route.theme', icon: 'mdi-palette' }
+      }
+    ]
   },
   {
     path: '/',
@@ -122,19 +122,19 @@ export const constantRoutes = [
         path: '/i18n',
         component: () => import('@/views/components/I18n.vue'),
         name: 'I18n',
-        meta: { title: 'route.i18n', icon: 'mdi-translate' },
-      },
-    ],
+        meta: { title: 'route.i18n', icon: 'mdi-translate' }
+      }
+    ]
   },
 
-  ...authRouter,
-];
+  ...authRouter
+]
 
 export default new Router({
   // mode: 'history', // gh-pages
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes,
-});
+  routes: constantRoutes
+})
 
 export const asyncRoutes = [
   /** When your routing table is too long, you can split it into small modules */
@@ -143,5 +143,5 @@ export const asyncRoutes = [
   ...componentsRouter,
   nestedRouter,
   errorsRouter,
-  { path: '*', redirect: '/error/404', hidden: true },
-];
+  { path: '*', redirect: '/error/404', hidden: true }
+]

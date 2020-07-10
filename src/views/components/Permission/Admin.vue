@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import AppCenter from '@/views/widget/AppCenter.vue';
+import AppCenter from '@/views/widget/AppCenter.vue'
 
 export default {
   name: 'Admin',
   components: {
-    AppCenter,
-  },
-};
+    AppCenter
+  }
+}
 </script>

@@ -64,48 +64,48 @@
 </template>
 
 <script>
-import colors from 'vuetify/es5/util/colors';
+import colors from 'vuetify/es5/util/colors'
 
 const kebab = (str) => {
-  const result = (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-  return result;
-};
+  const result = (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+  return result
+}
 
 export default {
   name: 'Colors',
   data: () => ({
     colors,
-    search: '',
+    search: ''
   }),
   computed: {
-    computedColors() {
-      const computed = {};
-      const search = this.search.toLowerCase();
+    computedColors () {
+      const computed = {}
+      const search = this.search.toLowerCase()
 
       Object.keys(this.colors).forEach((key) => {
-        const kebabKey = kebab(key).toLowerCase();
+        const kebabKey = kebab(key).toLowerCase()
 
         if (kebabKey.indexOf(search) > -1) {
-          computed[kebabKey] = this.colors[key];
+          computed[kebabKey] = this.colors[key]
         }
-      });
-      return computed;
-    },
+      })
+      return computed
+    }
   },
   methods: {
-    convertToClass(str) {
-      const end = str[str.length - 1];
-      const sub = str.substr(0, str.length - 1);
-      if (Number.isNaN(parseInt(end, 10))) return str;
-      return `${sub}-${end}`;
+    convertToClass (str) {
+      const end = str[str.length - 1]
+      const sub = str.substr(0, str.length - 1)
+      if (Number.isNaN(parseInt(end, 10))) return str
+      return `${sub}-${end}`
     },
-    getColorClass(key) {
-      if (['white', 'transparent', 'shades'].includes(key)
-        || key.indexOf('lighten') > -1
-        || key.indexOf('accent') > -1
-      ) return 'black--text';
-      return 'white--text';
-    },
-  },
-};
+    getColorClass (key) {
+      if (['white', 'transparent', 'shades'].includes(key) ||
+        key.indexOf('lighten') > -1 ||
+        key.indexOf('accent') > -1
+      ) return 'black--text'
+      return 'white--text'
+    }
+  }
+}
 </script>

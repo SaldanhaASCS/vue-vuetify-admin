@@ -42,16 +42,16 @@
 </template>
 
 <script>
-import Tinymce from '@tinymce/tinymce-vue';
+import Tinymce from '@tinymce/tinymce-vue'
 // import EditorImage from '@/components/Tinymce/EditorImage.vue';
-import { mapGetters } from 'vuex';
-import plugins from '@/demo/components/Tinymce/plugins';
-import toolbar from '@/demo/components/Tinymce/toolbar';
+import { mapGetters } from 'vuex'
+import plugins from '@/demo/components/Tinymce/plugins'
+import toolbar from '@/demo/components/Tinymce/toolbar'
 
 export default {
   name: 'TinymceDemo',
   components: { Tinymce },
-  data() {
+  data () {
     return {
       content:
         `<h1 style="text-align: center;">Welcome to the TinyMCE demo!</h1>
@@ -93,14 +93,14 @@ export default {
         imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
         default_link_target: '_blank',
         link_title: false,
-        nonbreaking_force_tab: true,
-      },
-    };
+        nonbreaking_force_tab: true
+      }
+    }
   },
   computed: {
     ...mapGetters([
-      'language',
-    ]),
-  },
-};
+      'language'
+    ])
+  }
+}
 </script>

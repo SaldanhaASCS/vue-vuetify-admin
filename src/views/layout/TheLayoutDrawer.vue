@@ -34,13 +34,13 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import TheLayoutDrawerList from './TheLayoutDrawerList.vue';
+import { mapGetters } from 'vuex'
+import TheLayoutDrawerList from './TheLayoutDrawerList.vue'
 
 export default {
   name: 'TheLayoutDrawer',
   components: {
-    TheLayoutDrawerList,
+    TheLayoutDrawerList
   },
   data: () => ({}),
   computed: {
@@ -49,13 +49,13 @@ export default {
       'navbarDense',
       'navbarShow',
       'navbarLogo',
-      'toolbarDense',
-    ]),
+      'toolbarDense'
+    ])
   },
   methods: {
-    stateNavbarShow(state) {
-      this.$store.dispatch('NavbarState', { state });
-    },
-  },
-};
+    stateNavbarShow (state) {
+      this.$store.dispatch('NavbarState', { state })
+    }
+  }
+}
 </script>

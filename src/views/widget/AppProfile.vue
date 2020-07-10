@@ -86,11 +86,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'AppProfile',
-  data() {
+  data () {
     return {
       menuitems: [
         {
@@ -98,47 +98,47 @@ export default {
           href: '#',
           title: 'toolbar.profile',
           click: (e) => {
-            console.log(e);
-          },
+            console.log(e)
+          }
         },
         {
           icon: 'mdi-settings',
           href: '#',
           title: 'toolbar.settings',
           click: () => {
-            console.log('this.toggleSettingsPanel()');
-            this.toggleSettingsPanel();
-          },
+            console.log('this.toggleSettingsPanel()')
+            this.toggleSettingsPanel()
+          }
         },
         {
           icon: 'mdi-exit-to-app',
           href: '#',
           title: 'toolbar.logout',
           click: () => {
-            this.logout();
-          },
-        },
-      ],
-    };
+            this.logout()
+          }
+        }
+      ]
+    }
   },
   computed: {
     ...mapGetters([
       'user',
       'name',
       'avatar',
-      'status',
-    ]),
+      'status'
+    ])
   },
   methods: {
-    logout() {
-      this.$store.dispatch('LogOut');
-      this.$router.push('/landing');
+    logout () {
+      this.$store.dispatch('LogOut')
+      this.$router.push('/landing')
     },
-    toggleSettingsPanel() {
-      console.log('this.toggleSettingsPanel()111');
-      this.$vuetify.goTo(0);
-      this.$store.dispatch('SettingsPanelToggle');
-    },
-  },
-};
+    toggleSettingsPanel () {
+      console.log('this.toggleSettingsPanel()111')
+      this.$vuetify.goTo(0)
+      this.$store.dispatch('SettingsPanelToggle')
+    }
+  }
+}
 </script>

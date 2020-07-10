@@ -34,17 +34,17 @@
 </template>
 
 <script>
-import { locales } from '@/locale';
+import { locales } from '@/locale'
 
 export default {
   name: 'AppLocalization',
   data: () => ({
-    locales,
+    locales
   }),
   methods: {
-    async setLocale(locale) {
-      await this.$store.dispatch('SetLocale', { locale });
-    },
-  },
-};
+    async setLocale (locale) {
+      await this.$store.dispatch('SetLocale', { locale })
+    }
+  }
+}
 </script>

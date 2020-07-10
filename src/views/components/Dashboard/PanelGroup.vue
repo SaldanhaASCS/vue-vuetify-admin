@@ -43,12 +43,12 @@
 </template>
 
 <script>
-import PanelGroupItem from './PanelGroupItem.vue';
+import PanelGroupItem from './PanelGroupItem.vue'
 
 export default {
   name: 'PanelGroup',
   components: {
-    PanelGroupItem,
-  },
-};
+    PanelGroupItem
+  }
+}
 </script>

@@ -179,30 +179,30 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { locales } from '@/locale';
-import { headers, desserts } from '@/api/mock_table';
-import AppWidget from '@/views/widget/AppWidget.vue';
+import { mapGetters } from 'vuex'
+import { locales } from '@/locale'
+import { headers, desserts } from '@/api/mock_table'
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'I18n',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     locales,
     headers,
-    desserts,
+    desserts
   }),
   computed: {
     ...mapGetters([
-      'locale',
-    ]),
+      'locale'
+    ])
   },
   methods: {
-    async setLocale(locale) {
-      await this.$store.dispatch('SetLocale', { locale });
-    },
-  },
-};
+    async setLocale (locale) {
+      await this.$store.dispatch('SetLocale', { locale })
+    }
+  }
+}
 </script>

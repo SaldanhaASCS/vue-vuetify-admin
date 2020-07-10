@@ -105,21 +105,21 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Sticky from '@/demo/components/Sticky/index.vue';
+import { mapGetters } from 'vuex'
+import Sticky from '@/demo/components/Sticky/index.vue'
 
 export default {
   name: 'StickyDemo',
   components: { Sticky },
   data: () => ({
-    items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+    items: ['Foo', 'Bar', 'Fizz', 'Buzz']
   }),
   computed: {
     ...mapGetters([
-      'toolbarDense',
-    ]),
-  },
-};
+      'toolbarDense'
+    ])
+  }
+}
 </script>
 
 <style scoped>

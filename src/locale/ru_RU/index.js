@@ -1,5 +1,5 @@
-import route from './route';
-import components from '@/demo/locale/ru_RU/components';
+import components from '@/demo/locale/ru_RU/components'
+import route from './route'
 
 export default {
   route,
@@ -8,7 +8,7 @@ export default {
     appname: 'Приложение',
     settings: 'Настройки',
     profile: 'Профиль',
-    logout: 'Выйти',
+    logout: 'Выйти'
   },
   settings: {
     title: 'Внешний Вид',
@@ -21,7 +21,7 @@ export default {
     navbarDense: 'Navbar dense',
     navbarLogo: 'Navbar logo',
     settingsBtn: 'Setting btn',
-    footer: 'Footer',
+    footer: 'Footer'
   },
   login: {
     titleIn: 'Форма авторизации',
@@ -30,7 +30,7 @@ export default {
     singUp: 'Зарегать', // "Зарегистрироваться" - верстка плывет, если не убрать кнопки
     email: 'Эл. почта',
     password: 'Пароль',
-    confirm: 'Подтвердить',
+    confirm: 'Подтвердить'
   },
   errors: {
     whoops: 'Упс',
@@ -39,12 +39,12 @@ export default {
     401: 'Неавторизовано',
     403: 'Запрещено',
     404: 'Не найден',
-    500: 'Внутренняя ошибка сервера',
+    500: 'Внутренняя ошибка сервера'
   },
   guide: {
-    description: 'Страница руководства полезна для людей, которые впервые знакомятся с проектом.'
-      + ' Вы можете кратко представить особенности проекта. Демо основано на',
-    button: 'Показать руководство',
+    description: 'Страница руководства полезна для людей, которые впервые знакомятся с проектом.' +
+      ' Вы можете кратко представить особенности проекта. Демо основано на',
+    button: 'Показать руководство'
   },
   ui: {
     switch: 'Сменить язык',
@@ -59,6 +59,6 @@ export default {
     accent: 'Акцент',
     firstName: 'Имя',
     lastName: 'Фамилия',
-    email: 'Электронная почта',
-  },
-};
+    email: 'Электронная почта'
+  }
+}

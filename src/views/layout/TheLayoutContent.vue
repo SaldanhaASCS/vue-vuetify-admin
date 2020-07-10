@@ -14,6 +14,6 @@
 <script>
 export default {
   name: 'TheLayoutContent',
-  data: () => ({}),
-};
+  data: () => ({})
+}
 </script>

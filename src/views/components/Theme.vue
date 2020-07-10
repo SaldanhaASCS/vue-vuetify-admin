@@ -111,8 +111,8 @@
 </template>
 
 <script>
-import AppTheme from '@/views/widget/AppTheme.vue';
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppTheme from '@/views/widget/AppTheme.vue'
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Theme',
@@ -127,8 +127,8 @@ export default {
       { color: 'success', icon: 'mdi-check-circle' },
       { color: 'error', icon: 'mdi-alert' },
       { color: 'warning', icon: 'mdi-alert' },
-      { color: 'info', icon: 'mdi-alert-circle' },
-    ],
-  }),
-};
+      { color: 'info', icon: 'mdi-alert-circle' }
+    ]
+  })
+}
 </script>

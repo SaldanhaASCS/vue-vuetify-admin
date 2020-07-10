@@ -12,7 +12,7 @@ export default {
   permission: {
     admin: 'Админ',
     editor: 'Редактор',
-    visitor: 'Посетитель',
+    visitor: 'Посетитель'
   },
   components: 'Компоненты',
   component: {
@@ -25,7 +25,7 @@ export default {
     markdown: 'Markdown',
     splitPane: 'Split Pane',
     sticky: 'Sticky',
-    tinymce: 'Tinymce',
+    tinymce: 'Tinymce'
   },
   vuetify: 'Vuetify UI',
   vuetifyComponents: {
@@ -51,7 +51,7 @@ export default {
     tables: 'Tables',
     timepicker: 'Timepicker',
     tooltip: 'Tooltip',
-    typography: 'Typography',
+    typography: 'Typography'
   },
   errors: 'Ошибки',
   errorPages: {
@@ -59,20 +59,20 @@ export default {
     page401: '401',
     page403: '403',
     page404: '404',
-    page500: '500',
+    page500: '500'
   },
   charts: 'Графики',
   chart: {
     keyboardChart: 'Гистограмма',
     lineChart: 'Линейный',
-    mixChart: 'Смешанный',
+    mixChart: 'Смешанный'
   },
   nested: {
     nested: 'Вложенные',
     nested1: 'Уровень 1',
     nested2: 'Уровень 2',
-    nested3: 'Уровень 3',
+    nested3: 'Уровень 3'
   },
   clipboard: 'Буфер обмена',
-  externalLink: 'Внешняя ссылка',
-};
+  externalLink: 'Внешняя ссылка'
+}

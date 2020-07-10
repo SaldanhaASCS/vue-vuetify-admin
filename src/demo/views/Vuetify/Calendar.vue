@@ -79,8 +79,8 @@ export default {
       { text: 'Week', value: 'week' },
       { text: 'Month', value: 'month' },
       { text: 'Custom Daily', value: 'custom-daily' },
-      { text: 'Custom Weekly', value: 'custom-weekly' },
-    ],
-  }),
-};
+      { text: 'Custom Weekly', value: 'custom-weekly' }
+    ]
+  })
+}
 </script>

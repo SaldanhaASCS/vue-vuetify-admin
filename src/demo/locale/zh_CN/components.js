@@ -11,5 +11,5 @@ export default {
   dropzoneTips: '',
   stickyTips: '当页面滚动到预设位置时，将在顶部粘贴。',
   backToTop: '当页面滚动到指定位置时，“返回顶部”按钮将显示在右下角',
-  draggable: '允许您在其中拖动面板和项目',
-};
+  draggable: '允许您在其中拖动面板和项目'
+}

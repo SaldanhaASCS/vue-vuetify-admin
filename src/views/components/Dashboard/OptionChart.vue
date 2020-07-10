@@ -6,67 +6,67 @@
 </template>
 
 <script>
-import echarts from 'echarts';
-import debounce from '@/utils';
+import echarts from 'echarts'
+import debounce from '@/utils'
 
-require('echarts/theme/macarons'); // echarts theme
+require('echarts/theme/macarons') // echarts theme
 
 export default {
   name: 'OptionChart',
   props: {
     className: {
       type: String,
-      default: 'chart',
+      default: 'chart'
     },
     width: {
       type: String,
-      default: '100%',
+      default: '100%'
     },
     height: {
       type: String,
-      default: '300px',
+      default: '300px'
     },
     chartData: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   data: () => ({
-    chart: null,
+    chart: null
   }),
   watch: {
     chartData: {
       deep: true,
-      handler(val) {
-        this.setOptions(val);
-      },
-    },
+      handler (val) {
+        this.setOptions(val)
+      }
+    }
   },
-  mounted() {
-    this.initChart();
+  mounted () {
+    this.initChart()
     this.resizeHandler = debounce(() => {
       if (this.chart) {
-        this.chart.resize();
+        this.chart.resize()
       }
-    }, 100);
-    window.addEventListener('resize', this.resizeHandler);
+    }, 100)
+    window.addEventListener('resize', this.resizeHandler)
   },
-  beforeDestroy() {
+  beforeDestroy () {
     if (!this.chart) {
-      return;
+      return
     }
-    window.removeEventListener('resize', this.resizeHandler);
-    this.chart.dispose();
-    this.chart = null;
+    window.removeEventListener('resize', this.resizeHandler)
+    this.chart.dispose()
+    this.chart = null
   },
   methods: {
-    setOptions(option = {}) {
-      this.chart.setOption(option);
+    setOptions (option = {}) {
+      this.chart.setOption(option)
     },
-    initChart() {
-      this.chart = echarts.init(this.$el, 'macarons');
-      this.setOptions(this.chartData);
-    },
-  },
-};
+    initChart () {
+      this.chart = echarts.init(this.$el, 'macarons')
+      this.setOptions(this.chartData)
+    }
+  }
+}
 </script>

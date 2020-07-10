@@ -143,12 +143,12 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Timepicker',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     picker: null,
@@ -158,7 +158,7 @@ export default {
     date2: null,
     date: null,
     menu: false,
-    modal: false,
-  }),
-};
+    modal: false
+  })
+}
 </script>

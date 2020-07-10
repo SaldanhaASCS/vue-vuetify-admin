@@ -360,27 +360,27 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Dialogs',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     basic: {
-      dialog: false,
+      dialog: false
     },
     fullscreen: {
       dialog: false,
       notifications: false,
       sound: true,
-      widgets: false,
+      widgets: false
     },
     scrollable: {
       name: '',
-      dialog: false,
-    },
-  }),
-};
+      dialog: false
+    }
+  })
+}
 </script>

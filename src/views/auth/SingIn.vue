@@ -111,8 +111,8 @@
 </template>
 
 <script>
-import Localization from '../widget/AppLocalization.vue';
-import { userAdmin, userEditor } from '@/api/mock';
+import { userAdmin, userEditor } from '@/api/mock'
+import Localization from '../widget/AppLocalization.vue'
 
 export default {
   name: 'SingIn',
@@ -121,26 +121,26 @@ export default {
     loading: false,
     model: {
       email: userAdmin.email,
-      password: userAdmin.password,
-    },
+      password: userAdmin.password
+    }
   }),
   methods: {
-    async login() {
+    async login () {
       await this.$store.dispatch('LoginByEmail', {
         email: this.model.email,
-        password: this.model.password,
-      });
-      await this.$router.push(this.$route.query.redirect || '/');
+        password: this.model.password
+      })
+      await this.$router.push(this.$route.query.redirect || '/')
     },
-    setUserToLogin(id) {
+    setUserToLogin (id) {
       if (id) {
-        this.model.email = userAdmin.email;
-        this.model.password = userAdmin.password;
+        this.model.email = userAdmin.email
+        this.model.password = userAdmin.password
       } else {
-        this.model.email = userEditor.email;
-        this.model.password = userEditor.password;
+        this.model.email = userEditor.email
+        this.model.password = userEditor.password
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>

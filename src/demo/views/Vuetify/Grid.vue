@@ -354,12 +354,12 @@
 </template>
 
 <script>
-import { lorem } from '@/api/mock';
+import { lorem } from '@/api/mock'
 
 export default {
   name: 'Grid',
   data: () => ({
-    lorem,
-  }),
-};
+    lorem
+  })
+}
 </script>

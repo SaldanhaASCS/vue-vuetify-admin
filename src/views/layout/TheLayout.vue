@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import TheLayoutDrawer from './TheLayoutDrawer.vue';
-import TheLayoutToolbar from './TheLayoutToolbar.vue';
-import TheLayoutContent from './TheLayoutContent.vue';
-import TheLayoutFab from './TheLayoutFab.vue';
-import TheLayoutToTopFab from './TheLayoutToTopFab.vue';
-import TheLayoutFooter from './TheLayoutFooter.vue';
+import TheLayoutDrawer from './TheLayoutDrawer.vue'
+import TheLayoutToolbar from './TheLayoutToolbar.vue'
+import TheLayoutContent from './TheLayoutContent.vue'
+import TheLayoutFab from './TheLayoutFab.vue'
+import TheLayoutToTopFab from './TheLayoutToTopFab.vue'
+import TheLayoutFooter from './TheLayoutFooter.vue'
 
 export default {
   name: 'TheLayout',
@@ -25,8 +25,8 @@ export default {
     TheLayoutContent,
     TheLayoutFab,
     TheLayoutToTopFab,
-    TheLayoutFooter,
+    TheLayoutFooter
   },
-  data: () => ({}),
-};
+  data: () => ({})
+}
 </script>

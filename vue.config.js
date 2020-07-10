@@ -1,9 +1,8 @@
+const path = require('path')
+const config = require('./src/config.js')
 
-const path = require('path');
-const config = require('./src/config.js');
-
-function resolve(dir) {
-  return path.join(__dirname, dir);
+function resolve (dir) {
+  return path.join(__dirname, dir)
 }
 
 module.exports = {
@@ -16,8 +15,8 @@ module.exports = {
     name: config.title,
     resolve: {
       alias: {
-        '@': resolve('src'),
-      },
-    },
-  },
-};
+        '@': resolve('src')
+      }
+    }
+  }
+}

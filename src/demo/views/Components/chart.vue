@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import KeyboardChart from '@/demo/components/Charts/Keyboard.vue';
-import LineChart from '@/demo/components/Charts/LineMarker.vue';
-import MixChart from '@/demo/components/Charts/MixChart.vue';
+import KeyboardChart from '@/demo/components/Charts/Keyboard.vue'
+import LineChart from '@/demo/components/Charts/LineMarker.vue'
+import MixChart from '@/demo/components/Charts/MixChart.vue'
 
 export default {
   name: 'Chart',
@@ -29,9 +29,9 @@ export default {
   props: {
     keyboard: Boolean,
     line: Boolean,
-    mix: Boolean,
-  },
-};
+    mix: Boolean
+  }
+}
 </script>
 
 <style scoped>

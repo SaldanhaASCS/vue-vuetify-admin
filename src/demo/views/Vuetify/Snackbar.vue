@@ -142,12 +142,12 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Snackbar',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     snackbar: false,
@@ -156,7 +156,7 @@ export default {
     mode: '',
     timeout: 6000,
     color: '',
-    text: 'Hello, I\'m a snackbar',
-  }),
-};
+    text: 'Hello, I\'m a snackbar'
+  })
+}
 </script>

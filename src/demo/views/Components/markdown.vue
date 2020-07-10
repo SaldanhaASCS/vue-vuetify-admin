@@ -141,7 +141,7 @@
 </template>
 
 <script>
-import MarkdownEditor from '@/demo/components/MarkdownEditor/index.vue';
+import MarkdownEditor from '@/demo/components/MarkdownEditor/index.vue'
 
 const content = `
 **This is test**
@@ -150,7 +150,7 @@ const content = `
 * element
 * webpack
 
-`;
+`
 export default {
   name: 'MarkdownDemo',
   components: { MarkdownEditor },
@@ -160,19 +160,19 @@ export default {
     languageTypeList: {
       en: 'en_US',
       ru: 'ru_RU',
-      es: 'es_ES',
-    },
+      es: 'es_ES'
+    }
   }),
   computed: {
-    language() {
-      return this.languageTypeList[this.$store.getters.language];
-    },
+    language () {
+      return this.languageTypeList[this.$store.getters.language]
+    }
   },
   methods: {
-    getHtml() {
-      this.html = this.$refs.markdownEditor.getHtml();
-      console.log(this.html);
-    },
-  },
-};
+    getHtml () {
+      this.html = this.$refs.markdownEditor.getHtml()
+      console.log(this.html)
+    }
+  }
+}
 </script>

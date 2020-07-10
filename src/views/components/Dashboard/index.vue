@@ -101,16 +101,16 @@ import {
   getLineChartOption,
   getRaddarChartOption,
   getPieChartOption,
-  getBarChartOption,
-} from '@/api/mock';
-import * as Activity from '@/api/mock_activity';
+  getBarChartOption
+} from '@/api/mock'
+import * as Activity from '@/api/mock_activity'
 
-import GithubCorner from '@/views/components/Dashboard/GithubCorner.vue';
-import PanelGroup from '@/views/components/Dashboard/PanelGroup.vue';
-import OptionChart from '@/views/components/Dashboard/OptionChart.vue';
-import PlainTable from '@/views/components/Dashboard/PlainTable.vue';
-import PlainTableOrder from '@/views/components/Dashboard/PlainTableOrder.vue';
-import AppWidget from '@/views/widget/AppWidget.vue';
+import GithubCorner from '@/views/components/Dashboard/GithubCorner.vue'
+import PanelGroup from '@/views/components/Dashboard/PanelGroup.vue'
+import OptionChart from '@/views/components/Dashboard/OptionChart.vue'
+import PlainTable from '@/views/components/Dashboard/PlainTable.vue'
+import PlainTableOrder from '@/views/components/Dashboard/PlainTableOrder.vue'
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Dashboard',
@@ -120,34 +120,34 @@ export default {
     OptionChart,
     PlainTable,
     PlainTableOrder,
-    AppWidget,
+    AppWidget
   },
   data: () => ({
-    lineChartData: lineChartData.newVisitis,
+    lineChartData: lineChartData.newVisitis
   }),
   computed: {
-    activity() {
-      return Activity.default.getActivity();
-    },
+    activity () {
+      return Activity.default.getActivity()
+    }
   },
   methods: {
-    handleSetLineChartData(type) {
-      this.lineChartData = lineChartData[type];
+    handleSetLineChartData (type) {
+      this.lineChartData = lineChartData[type]
     },
-    getChartOption(option) {
+    getChartOption (option) {
       switch (option) {
-        case 'line':
-          return getLineChartOption(this.lineChartData);
-        case 'raddar':
-          return getRaddarChartOption({ animationDuration: 3000 });
-        case 'pie':
-          return getPieChartOption();
-        case 'bar':
-          return getBarChartOption({ animationDuration: 6000 });
-        default:
-          return {};
+      case 'line':
+        return getLineChartOption(this.lineChartData)
+      case 'raddar':
+        return getRaddarChartOption({ animationDuration: 3000 })
+      case 'pie':
+        return getPieChartOption()
+      case 'bar':
+        return getBarChartOption({ animationDuration: 6000 })
+      default:
+        return {}
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>

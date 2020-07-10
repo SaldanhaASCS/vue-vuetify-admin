@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import colors from 'vuetify/es5/util/colors';
+import colors from 'vuetify/es5/util/colors'
 
 const dark = {
   primary: '#2196F3',
@@ -13,8 +13,8 @@ const dark = {
   success: '#4CAF50',
   error: '#FF5252',
   warning: '#FB8C00',
-  info: '#2196F3',
-};
+  info: '#2196F3'
+}
 
 /**
  * Vuetify theme options.
@@ -28,9 +28,9 @@ const themes = [
       success: '#4CAF50',
       error: '#FF5252',
       warning: '#FB8C00',
-      info: '#2196F3',
+      info: '#2196F3'
     },
-    dark,
+    dark
   },
   {
     light: {
@@ -40,9 +40,9 @@ const themes = [
       success: colors.green.base, // #4CAF50
       error: colors.red.accent2, // #FF5252
       warning: colors.amber.base, // #FFC107
-      info: colors.blue.base, // #2196F3
+      info: colors.blue.base // #2196F3
     },
-    dark,
+    dark
   },
   {
     light: {
@@ -52,9 +52,9 @@ const themes = [
       success: colors.green.base,
       error: colors.red.base,
       warning: colors.amber.base,
-      info: colors.cyan.base,
+      info: colors.cyan.base
     },
-    dark,
+    dark
   },
   {
     light: {
@@ -64,9 +64,9 @@ const themes = [
       success: colors.green.darken3,
       error: colors.red.darken3,
       warning: colors.amber.darken3,
-      info: colors.cyan.darken3,
+      info: colors.cyan.darken3
     },
-    dark,
+    dark
   },
   {
     light: {
@@ -76,9 +76,9 @@ const themes = [
       success: colors.lime.darken3,
       error: colors.red.base,
       warning: colors.deepOrange.base,
-      info: colors.cyan.base,
+      info: colors.cyan.base
     },
-    dark,
+    dark
   },
   {
     light: {
@@ -88,9 +88,9 @@ const themes = [
       success: colors.teal.base,
       error: colors.red.base,
       warning: colors.orange.base,
-      info: colors.indigo.base,
+      info: colors.indigo.base
     },
-    dark,
+    dark
   },
   {
     light: {
@@ -100,9 +100,9 @@ const themes = [
       success: colors.teal.base,
       error: colors.pink.base,
       warning: colors.purple.base,
-      info: colors.deepPurple.base,
+      info: colors.deepPurple.base
     },
-    dark,
+    dark
   },
   {
     light: {
@@ -112,9 +112,9 @@ const themes = [
       success: colors.teal.base,
       error: colors.brown.base,
       warning: colors.amber.base,
-      info: colors.indigo.base,
+      info: colors.indigo.base
     },
-    dark,
-  },
-];
-export default themes;
+    dark
+  }
+]
+export default themes

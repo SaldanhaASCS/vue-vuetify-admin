@@ -91,8 +91,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import AppTheme from '@/views/widget/AppTheme.vue';
+import { mapGetters } from 'vuex'
+import AppTheme from '@/views/widget/AppTheme.vue'
 
 export default {
   name: 'TheLayoutFab',
@@ -107,74 +107,74 @@ export default {
       'toolbarDense',
       'navbarDense',
       'navbarLogo',
-      'footerShow',
+      'footerShow'
     ]),
-    switches() {
+    switches () {
       return [
         {
           value: this.toolbarDense,
           label: `${this.$t('settings.toolbarDense')}: ${this.toolbarDense ? 'on' : 'off'}`,
-          change: this.toggleToolbarDense,
+          change: this.toggleToolbarDense
         },
         {
           value: this.navbarDense,
           label: `${this.$t('settings.navbarDense')}: ${this.navbarDense ? 'on' : 'off'}`,
-          change: this.toggleNavbarDense,
+          change: this.toggleNavbarDense
         },
         {
           value: this.navbarLogo,
           label: `${this.$t('settings.navbarLogo')}: ${this.navbarLogo ? 'on' : 'off'}`,
-          change: this.toggleNavbarLogo,
+          change: this.toggleNavbarLogo
         },
         {
           value: this.settingsPanelBtn,
           label: `${this.$t('settings.settingsBtn')}: ${this.settingsPanelBtn ? 'on' : 'off'}`,
-          change: this.toggleSettingsPanelBtn,
+          change: this.toggleSettingsPanelBtn
         },
         {
           value: this.footerShow,
           label: `${this.$t('settings.footer')}: 'off'`,
-          change: this.toggleFooterToggle,
+          change: this.toggleFooterToggle
         },
         {
           value: this.themeDark,
           label: `${this.$t('settings.dark')}: 'off'`,
-          change: this.toogleThemeDark,
-        },
-      ];
-    },
+          change: this.toogleThemeDark
+        }
+      ]
+    }
   },
   methods: {
-    stateSettingsPanel(state) {
-      this.$store.dispatch('SettingsPanelState', { state });
+    stateSettingsPanel (state) {
+      this.$store.dispatch('SettingsPanelState', { state })
     },
-    toggleSettingsPanel() {
-      this.$vuetify.goTo(0);
-      this.$store.dispatch('SettingsPanelToggle');
+    toggleSettingsPanel () {
+      this.$vuetify.goTo(0)
+      this.$store.dispatch('SettingsPanelToggle')
     },
-    toogleThemeDark() {
-      this.$store.dispatch('ThemeDarkToggle');
+    toogleThemeDark () {
+      this.$store.dispatch('ThemeDarkToggle')
     },
-    toggleToolbarDense() {
-      this.$store.dispatch('ToolbarDenseToggle');
+    toggleToolbarDense () {
+      this.$store.dispatch('ToolbarDenseToggle')
     },
-    toggleNavbarDense() {
-      this.$store.dispatch('NavbarDenseToggle');
+    toggleNavbarDense () {
+      this.$store.dispatch('NavbarDenseToggle')
     },
-    toggleNavbarLogo() {
-      this.$store.dispatch('NavbarLogoToggle');
+    toggleNavbarLogo () {
+      this.$store.dispatch('NavbarLogoToggle')
     },
-    toggleSettingsPanelBtn() {
-      this.$store.dispatch('SettingsPanelBtnToggle');
+    toggleSettingsPanelBtn () {
+      this.$store.dispatch('SettingsPanelBtnToggle')
     },
-    toggleFooterToggle() {
-      this.$store.dispatch('FooterToggle');
+    toggleFooterToggle () {
+      this.$store.dispatch('FooterToggle')
     },
-    setDefaultSettingsPanel() {
-      this.$store.dispatch('SettingsPanelDefault');
-    },
-  },
-};
+    setDefaultSettingsPanel () {
+      this.$store.dispatch('SettingsPanelDefault')
+    }
+  }
+}
 </script>
 
 <style>

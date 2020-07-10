@@ -89,12 +89,12 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Slider',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     slider1: 0,
@@ -104,7 +104,7 @@ export default {
     media2: 0,
     ex1: { label: 'color', val: 25, color: 'orange darken-3' },
     ex2: { label: 'track-color', val: 75, color: 'green lighten-1' },
-    ex3: { label: 'thumb-color', val: 50, color: 'red' },
-  }),
-};
+    ex3: { label: 'thumb-color', val: 50, color: 'red' }
+  })
+}
 </script>

@@ -1,6 +1,6 @@
 /** When your routing table is too long, you can split it into small modules */
 
-import Layout from '@/views/layout/TheLayout.vue';
+import Layout from '@/views/layout/TheLayout.vue'
 
 const componentsRouter = [
   {
@@ -10,64 +10,64 @@ const componentsRouter = [
     name: 'ComponentDemo',
     meta: {
       title: 'route.components',
-      icon: 'mdi-view-module',
+      icon: 'mdi-view-module'
     },
     children: [
       {
         path: 'tinymce',
         component: () => import('@/demo/views/Components/tinymce'),
         name: 'TinymceDemo',
-        meta: { title: 'route.component.tinymce' },
+        meta: { title: 'route.component.tinymce' }
       },
       {
         path: 'markdown',
         component: () => import('@/demo/views/Components/markdown'),
         name: 'MarkdownDemo',
-        meta: { title: 'route.component.markdown' },
+        meta: { title: 'route.component.markdown' }
       },
       {
         path: 'json-editor',
         component: () => import('@/demo/views/Components/jsonEditor'),
         name: 'JsonEditorDemo',
-        meta: { title: 'route.component.jsonEditor' },
+        meta: { title: 'route.component.jsonEditor' }
       },
       {
         path: 'splitpane',
         component: () => import('@/demo/views/Components/splitpane'),
         name: 'SplitpaneDemo',
-        meta: { title: 'route.component.splitPane' },
+        meta: { title: 'route.component.splitPane' }
       },
       {
         path: 'dropzone',
         component: () => import('@/demo/views/Components/dropzone'),
         name: 'DropzoneDemo',
-        meta: { title: 'route.component.dropzone' },
+        meta: { title: 'route.component.dropzone' }
       },
       {
         path: 'sticky',
         component: () => import('@/demo/views/Components/sticky'),
         name: 'StickyDemo',
-        meta: { title: 'route.component.sticky' },
+        meta: { title: 'route.component.sticky' }
       },
       {
         path: 'count-to',
         component: () => import('@/demo/views/Components/countTo'),
         name: 'CountToDemo',
-        meta: { title: 'route.component.countTo' },
+        meta: { title: 'route.component.countTo' }
       },
       {
         path: 'back-to-top',
         component: () => import('@/demo/views/Components/backToTop'),
         name: 'BackToTopDemo',
-        meta: { title: 'route.component.backToTop' },
+        meta: { title: 'route.component.backToTop' }
       },
       {
         path: 'drag-kanban',
         component: () => import('@/demo/views/Components/dragKanban'),
         name: 'DragKanbanDemo',
-        meta: { title: 'route.component.dragKanban' },
-      },
-    ],
+        meta: { title: 'route.component.dragKanban' }
+      }
+    ]
   },
   {
     path: '/charts',
@@ -76,7 +76,7 @@ const componentsRouter = [
     name: 'Charts',
     meta: {
       title: 'route.charts',
-      icon: 'mdi-chart-bar',
+      icon: 'mdi-chart-bar'
     },
     children: [
       {
@@ -84,24 +84,24 @@ const componentsRouter = [
         component: () => import('@/demo/views/Components/chart.vue'),
         name: 'KeyboardChart',
         meta: { title: 'route.chart.keyboardChart', noCache: true },
-        props: { keyboard: true },
+        props: { keyboard: true }
       },
       {
         path: 'line',
         component: () => import('@/demo/views/Components/chart.vue'),
         name: 'LineChart',
         meta: { title: 'route.chart.lineChart', noCache: true },
-        props: { line: true },
+        props: { line: true }
       },
       {
         path: 'mix-chart',
         component: () => import('@/demo/views/Components/chart.vue'),
         name: 'MixChart',
         meta: { title: 'route.chart.mixChart', noCache: true },
-        props: { mix: true },
-      },
-    ],
-  },
+        props: { mix: true }
+      }
+    ]
+  }
   /*
   {
     path: '/excel',
@@ -199,6 +199,6 @@ const componentsRouter = [
       }
     ]
   } */
-];
+]
 
-export default componentsRouter;
+export default componentsRouter

@@ -155,12 +155,12 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Datepicker',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     picker: null,
@@ -170,15 +170,15 @@ export default {
     date2: null,
     date: null,
     menu: false,
-    modal: false,
+    modal: false
   }),
-  mounted() {
+  mounted () {
     this.arrayEvents = [...Array(6)].map(() => {
-      const day = Math.floor(Math.random() * 30);
-      const d = new Date();
-      d.setDate(day);
-      return d.toISOString().substr(0, 10);
-    });
-  },
-};
+      const day = Math.floor(Math.random() * 30)
+      const d = new Date()
+      d.setDate(day)
+      return d.toISOString().substr(0, 10)
+    })
+  }
+}
 </script>

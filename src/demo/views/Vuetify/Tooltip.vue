@@ -103,7 +103,6 @@
               <v-row
                 class="flex"
 
-
                 justify="space-between"
               >
                 <v-col cols="12">
@@ -142,15 +141,15 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Tooltip',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
-    show: false,
-  }),
-};
+    show: false
+  })
+}
 </script>

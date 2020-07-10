@@ -34,15 +34,15 @@ export default {
   props: {
     title: {
       type: String,
-      default: '',
+      default: ''
     },
     icon: {
       type: String,
-      default: 'mdi-dots-vertical',
+      default: 'mdi-dots-vertical'
     },
     headerHide: Boolean,
-    paddingHide: Boolean,
+    paddingHide: Boolean
   },
-  data: () => ({}),
-};
+  data: () => ({})
+}
 </script>

@@ -17,19 +17,19 @@
 </template>
 
 <script>
-import AppCenter from '@/views/widget/AppCenter.vue';
+import AppCenter from '@/views/widget/AppCenter.vue'
 
 export default {
   name: 'ErrorPage',
   components: {
-    AppCenter,
+    AppCenter
   },
   props: {
     errorCode: {
       type: Number,
-      default: 404,
-    },
+      default: 404
+    }
   },
-  data: () => ({}),
-};
+  data: () => ({})
+}
 </script>

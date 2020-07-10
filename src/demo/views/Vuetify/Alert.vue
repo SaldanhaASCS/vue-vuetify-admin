@@ -166,28 +166,28 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Alert',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     alert: {
       showSuccess: true,
       showError: true,
       showWarnning: true,
-      showInfo: true,
-    },
+      showInfo: true
+    }
   }),
   methods: {
-    handleReset() {
-      this.alert.showError = true;
-      this.alert.showSuccess = true;
-      this.alert.showWarnning = true;
-      this.alert.showInfo = true;
-    },
-  },
-};
+    handleReset () {
+      this.alert.showError = true
+      this.alert.showSuccess = true
+      this.alert.showWarnning = true
+      this.alert.showInfo = true
+    }
+  }
+}
 </script>

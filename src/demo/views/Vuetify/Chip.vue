@@ -243,23 +243,23 @@
 </template>
 
 <script>
-import AppWidget from '@/views/widget/AppWidget.vue';
+import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
   name: 'Chip',
   components: {
-    AppWidget,
+    AppWidget
   },
   data: () => ({
     chips: ['Programming', 'Watching', 'Sleeping'],
     chip1: true,
-    chip2: true,
+    chip2: true
   }),
   methods: {
-    remove(item) {
-      this.chips.splice(this.chips.indexOf(item), 1);
-      this.chips = [...this.chips];
-    },
-  },
-};
+    remove (item) {
+      this.chips.splice(this.chips.indexOf(item), 1)
+      this.chips = [...this.chips]
+    }
+  }
+}
 </script>

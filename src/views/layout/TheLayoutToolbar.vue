@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Breadcrumbs from '../widget/AppBreadcrumbs.vue';
-import ErrorLog from '../widget/AppErrorLog.vue';
-import FullScreen from '../widget/AppFullScreen.vue';
-import Localization from '../widget/AppLocalization.vue';
-import Notification from '../widget/AppNotification.vue';
-import Profile from '../widget/AppProfile.vue';
+import { mapGetters } from 'vuex'
+import Breadcrumbs from '../widget/AppBreadcrumbs.vue'
+import ErrorLog from '../widget/AppErrorLog.vue'
+import FullScreen from '../widget/AppFullScreen.vue'
+import Localization from '../widget/AppLocalization.vue'
+import Notification from '../widget/AppNotification.vue'
+import Profile from '../widget/AppProfile.vue'
 
 export default {
   name: 'TheLayoutToolbar',
@@ -33,22 +33,22 @@ export default {
     FullScreen,
     Localization,
     Notification,
-    Profile,
+    Profile
   },
   data: () => ({}),
   computed: {
     ...mapGetters([
       'toolbarDense',
-      'navbarShow',
+      'navbarShow'
     ]),
-    toggleNavbarIcon() {
-      return this.navbarShow ? 'mdi-format-indent-decrease' : 'mdi-format-indent-increase';
-    },
+    toggleNavbarIcon () {
+      return this.navbarShow ? 'mdi-format-indent-decrease' : 'mdi-format-indent-increase'
+    }
   },
   methods: {
-    toggleNavbar() {
-      this.$store.dispatch('NavbarToggle');
-    },
-  },
-};
+    toggleNavbar () {
+      this.$store.dispatch('NavbarToggle')
+    }
+  }
+}
 </script>
