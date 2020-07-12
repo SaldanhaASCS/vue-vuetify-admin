@@ -11,3 +11,23 @@ describe('TheLayout.vue', () => {
     expect(wrapper.text()).to.include(msg)
   })
 })
+
+/*
+Para esse teste PASSAR você terá que incluir, no componente TheLayout.vue,
+a props.msg e a interpolação {{ msg }} no template, conforme abaixo:
+
+<template>
+  <div>
+    {{ msg }}
+  </div>
+</template>
+
+<script>
+props: {
+  msg: {
+    type: String,
+    default: ''
+  }
+},
+</script>
+*/

@@ -3,8 +3,10 @@ node_modules
 /dist
 package-lock.json
 
+#tests
 /tests/e2e/reports/
 selenium-debug.log
+chromedriver.log
 
 # local env files
 .env
