@@ -5,7 +5,7 @@ import Layout from '@/views/layout/TheLayout.vue'
 const permissionRouter = {
   path: '/permission',
   component: Layout,
-  redirect: 'noredirect',
+  redirect: '#',
   name: 'Permission',
   meta: {
     title: 'route.permissions',

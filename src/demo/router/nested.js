@@ -6,7 +6,7 @@ import Nasted from '@/views/components/Nasted.vue'
 const nestedRouter = {
   path: '/nested',
   component: Layout,
-  redirect: 'noredirect',
+  redirect: '#',
   name: 'NestedMenu',
   meta: {
     title: 'route.nested.nested',

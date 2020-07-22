@@ -6,7 +6,7 @@ import ErrorPage from '@/views/components/ErrorPage.vue'
 const errorsRouter = {
   path: '/error',
   component: Layout,
-  redirect: 'noredirect',
+  redirect: '#',
   name: 'ErrorPages',
   meta: {
     title: 'route.errors',

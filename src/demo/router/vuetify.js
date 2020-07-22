@@ -5,7 +5,7 @@ import Layout from '@/views/layout/TheLayout.vue'
 const vuetifyRouter = {
   path: '/vuetify',
   component: Layout,
-  redirect: 'noredirect',
+  redirect: '#',
   name: 'VuetifyDemo',
   meta: {
     title: 'route.vuetify',

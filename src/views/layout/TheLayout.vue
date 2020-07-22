@@ -6,6 +6,7 @@
     <the-layout-fab />
     <the-layout-to-top-fab />
     <the-layout-footer />
+    {{ basePath }}
   </div>
 </template>
 
@@ -26,6 +27,12 @@ export default {
     TheLayoutFab,
     TheLayoutToTopFab,
     TheLayoutFooter
+  },
+  props: {
+    basePath: {
+      type: String,
+      default: ''
+    }
   },
   data: () => ({})
 }

@@ -13,8 +13,6 @@
 </template>
 
 <script>
-const pathToRegexp = require('path')
-
 export default {
   name: 'AppBreadcrumbs',
   data: () => ({
@@ -48,11 +46,6 @@ export default {
       this.levelList = matched.filter((item) => item.meta &&
         item.meta.title && item.meta.breadcrumb !== false)
     },
-    pathCompile (path) {
-      const { params } = this.$route
-      const toPath = pathToRegexp.compile(path)
-      return toPath(params)
-    },
     handleLink (item) {
       console.groupCollapsed('handleLink')
       const { redirect, path } = item
@@ -63,7 +56,9 @@ export default {
         console.groupEnd()
         return
       }
-      this.$router.push(this.pathCompile(path))
+      if (this.$router.currentRoute.path !== path) {
+        this.$router.push(path)
+      }
       console.groupEnd()
     }
   }

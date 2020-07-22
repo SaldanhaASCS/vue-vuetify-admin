@@ -1,14 +1,25 @@
 import { expect } from 'chai'
 import { shallowMount } from '@vue/test-utils'
-import Layout from '@/views/layout/TheLayout.vue'
+import TheLayout from '@/views/layout/TheLayout.vue'
+import TheLayoutDrawer from '@/views/layout/TheLayoutDrawer.vue'
 
 describe('TheLayout.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(Layout, {
-      propsData: { msg }
+  let component
+  const basePath = 'new message'
+
+  beforeEach(() => {
+    component = shallowMount(TheLayout, {
+      propsData: { basePath }
     })
-    expect(wrapper.text()).to.include(msg)
+  })
+
+  it('renders props.basePath when passed', () => {
+    expect(component.text()).to.include(basePath)
+  })
+
+  // Inspeciona as opções do componente
+  it('has a created hook', () => {
+    expect(component.find(TheLayoutDrawer).exists()).to.be.true
   })
 })
 

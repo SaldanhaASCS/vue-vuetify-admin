@@ -6,7 +6,7 @@ const componentsRouter = [
   {
     path: '/components',
     component: Layout,
-    redirect: '/components/tinymce',
+    redirect: '#',
     name: 'ComponentDemo',
     meta: {
       title: 'route.components',

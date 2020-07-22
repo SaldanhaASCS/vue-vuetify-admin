@@ -41,6 +41,7 @@ module.exports = {
     'vuetify/grid-unknown-attributes': 'warn',
     'vuetify/no-legacy-grid': 'warn',
     'template-curly-spacing': 'off',
+    'no-unused-expressions': 'off',
     indent: ['warn', 2, { ignoredNodes: ['TemplateLiteral'] }]
   },
   parserOptions: {

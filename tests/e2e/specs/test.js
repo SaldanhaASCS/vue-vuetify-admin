@@ -4,11 +4,11 @@
 module.exports = {
   'default e2e tests': (browser) => {
     browser
-      .url(process.env.VUE_APP_URL)
+      .url('http://localhost:8080/#/singin')
       .waitForElementVisible('#app', 5000)
-      // .assert.elementPresent('.hello')
-      // .assert.containsText('h1', 'Welcome to Your Vue.js App')
-      // .assert.elementCount('img', 1)
+      .assert.elementPresent('.container')
+      .assert.containsText('h1', 'Vue Vuetify Admin Template')
+      .assert.elementCount('img', 1)
       .end()
   }
 }
