@@ -26,7 +26,7 @@
         cols="12"
         class="text-sm-left text-center"
       >
-        <v-btn @click="$refs.calendar.prev">
+        <v-btn @click="$refs.calendar.prev()">
           <v-icon
             dark
             left
@@ -52,7 +52,7 @@
         cols="12"
         class="text-sm-right text-center"
       >
-        <v-btn @click="$refs.calendar.next">
+        <v-btn @click="$refs.calendar.next()">
           Next
           <v-icon
             right

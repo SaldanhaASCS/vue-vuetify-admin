@@ -8,7 +8,7 @@
               slot="widget-content"
               class="text-center"
             >
-              <v-parallax src="static/bg/12.jpg" />
+              <v-parallax src="/static/bg/12.jpg" />
             </div>
           </app-widget>
           <app-widget
@@ -19,7 +19,7 @@
               slot="widget-content"
               class="text-center"
             >
-              <v-parallax src="static/bg/1.jpg">
+              <v-parallax src="/static/bg/1.jpg">
                 <v-row
                   align="center"
                   justify="center"
@@ -43,7 +43,7 @@
               class="text-center"
             >
               <v-parallax
-                src="static/bg/21.jpg"
+                src="/static/bg/21.jpg"
                 height="700"
                 jumbotron
               />

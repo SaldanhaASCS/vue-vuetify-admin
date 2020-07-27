@@ -24,7 +24,7 @@
         <app-widget title="Hide Controls">
           <div slot="widget-content">
             <v-carousel
-              hide-controls
+              :show-arrows="true"
               hide-delimiters
             >
               <v-carousel-item
@@ -50,10 +50,10 @@ export default {
   },
   data: () => ({
     items: [
-      { src: './static/nature/n1.jpeg' },
-      { src: './static/nature/n2.jpeg' },
-      { src: './static/nature/n3.jpeg' },
-      { src: './static/nature/n4.jpeg' }
+      { src: '/static/nature/n1.jpeg' },
+      { src: '/static/nature/n2.jpeg' },
+      { src: '/static/nature/n3.jpeg' },
+      { src: '/static/nature/n4.jpeg' }
     ]
   })
 }

@@ -20,7 +20,7 @@
           </v-card-text>
           <v-card-actions>
             <v-btn
-              flat
+              text
               small
             >
               Link
@@ -44,7 +44,7 @@
           </v-card-text>
           <v-card-actions>
             <v-btn
-              flat
+              text
               small
             >
               Link
@@ -65,7 +65,7 @@
           </v-card-text>
           <v-card-actions>
             <v-btn
-              flat
+              text
               small
             >
               Link
@@ -84,7 +84,7 @@
       >
         <v-card>
           <v-img
-            src="static/bg/8.jpg"
+            src="/static/bg/8.jpg"
             height="250"
           >
             <h2 class="white--text pa-3">
@@ -99,7 +99,7 @@
           <v-divider />
           <v-card-actions>
             <v-btn
-              flat
+              text
               small
             >
               Link
@@ -113,7 +113,7 @@
       >
         <v-card>
           <v-img
-            src="static/nature/n3.jpeg"
+            src="/static/nature/n3.jpeg"
             height="250"
           >
             <h2 class="white--text pa-3">
@@ -126,7 +126,7 @@
               class="float-right mt-56"
             >
               <img
-                src="static/avatar/man_2.jpg"
+                src="/static/avatar/man_2.jpg"
                 alt=""
               >
             </v-avatar>
@@ -137,7 +137,7 @@
           <v-divider />
           <v-card-actions>
             <v-btn
-              flat
+              text
               small
             >
               Link
@@ -151,7 +151,7 @@
       >
         <v-card>
           <v-img
-            src="static/nature/n4.jpeg"
+            src="/static/nature/n4.jpeg"
             height="250"
           >
             <h2 class="white--text pa-3">
@@ -175,7 +175,7 @@
           <v-divider />
           <v-card-actions>
             <v-btn
-              flat
+              text
               small
             >
               Link
@@ -193,7 +193,7 @@
         sm="12"
       >
         <v-carousel
-          hide-controls
+          :show-arrows="true"
           hide-delimiters
           class="fill-height"
           height="179"
@@ -211,7 +211,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-btn
-                  flat
+                  text
                   small
                 >
                   Link
@@ -232,7 +232,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-btn
-                  flat
+                  text
                   small
                 >
                   Link
@@ -253,7 +253,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-btn
-                  flat
+                  text
                   small
                 >
                   Link
