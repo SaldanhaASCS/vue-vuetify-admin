@@ -24,6 +24,14 @@ const steps = [
     }
   },
   {
+    element: '#logs-container',
+    popover: {
+      title: 'Logs Viewer',
+      description: 'Viewing backend logs',
+      position: 'left'
+    }
+  },
+  {
     element: '#fullscreen-container',
     popover: {
       title: 'Screenfull',
@@ -60,15 +68,6 @@ const steps = [
     popover: {
       title: 'Fab Settings',
       description: 'Application settings',
-      position: 'left'
-    },
-    padding: 0
-  },
-  {
-    element: '#logs',
-    popover: {
-      title: 'Logs Viewer',
-      description: 'Viewing backend logs',
       position: 'left'
     },
     padding: 0

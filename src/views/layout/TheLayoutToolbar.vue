@@ -11,7 +11,7 @@
     </v-app-bar-nav-icon>
     <breadcrumbs />
     <v-spacer />
-    <error-log />
+    <error-log id="logs-container" />
     <full-screen />
     <notification />
     <localization />

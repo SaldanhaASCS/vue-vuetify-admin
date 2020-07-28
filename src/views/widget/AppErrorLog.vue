@@ -1,6 +1,5 @@
 <template>
   <v-btn
-    id="logs"
     color="error"
     disabled
     icon
