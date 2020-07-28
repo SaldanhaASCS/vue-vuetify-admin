@@ -65,6 +65,15 @@ const steps = [
     padding: 0
   },
   {
+    element: '#logs',
+    popover: {
+      title: 'Logs Viewer',
+      description: 'Viewing backend logs',
+      position: 'left'
+    },
+    padding: 0
+  },
+  {
     element: '#card-1',
     popover: {
       title: 'Card 1',
