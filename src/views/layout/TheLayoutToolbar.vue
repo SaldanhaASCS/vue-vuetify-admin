@@ -3,7 +3,10 @@
     app
     :dense="toolbarDense"
   >
-    <v-app-bar-nav-icon @click.stop="toggleNavbar">
+    <v-app-bar-nav-icon
+      id="hamburger-container"
+      @click.stop="toggleNavbar"
+    >
       <v-icon>{{ toggleNavbarIcon }}</v-icon>
     </v-app-bar-nav-icon>
     <breadcrumbs />

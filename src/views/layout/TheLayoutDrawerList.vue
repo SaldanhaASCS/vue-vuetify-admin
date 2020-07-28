@@ -1,5 +1,6 @@
 <template>
   <v-list
+    id="app-drawer"
     :dense="dense"
     class="layout-drawer"
   >

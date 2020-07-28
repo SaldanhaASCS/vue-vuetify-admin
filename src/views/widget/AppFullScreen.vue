@@ -1,5 +1,6 @@
 <template>
   <v-btn
+    id="fullscreen-container"
     icon
     @click="toggleFullScreen"
   >

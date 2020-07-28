@@ -1,5 +1,6 @@
 <template>
   <v-breadcrumbs
+    id="breadcrumbs-container"
     class="hidden-sm-and-down"
     :items="levelList"
     divider="/"

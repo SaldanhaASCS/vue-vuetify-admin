@@ -63,6 +63,33 @@ const steps = [
       position: 'left'
     },
     padding: 0
+  },
+  {
+    element: '#card-1',
+    popover: {
+      title: 'Card 1',
+      description: 'Demo guide',
+      position: 'top'
+    },
+    padding: 0
+  },
+  {
+    element: '#card-2',
+    popover: {
+      title: 'Card 2',
+      description: 'Demo guide',
+      position: 'bottom'
+    },
+    padding: 0
+  },
+  {
+    element: '#card-3',
+    popover: {
+      title: 'Card 3',
+      description: 'Demo guides',
+      position: 'top'
+    },
+    padding: 0
   }
 ]
 

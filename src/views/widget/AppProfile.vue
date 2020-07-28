@@ -7,6 +7,7 @@
   >
     <template v-slot:activator="{on}">
       <v-btn
+        id="profile-container"
         icon
         large
         text

@@ -2,6 +2,7 @@
   <v-main class="layout-fab">
     <v-btn
       v-if="settingsPanelBtn"
+      id="app-fab-btn"
       small
       fab
       falt

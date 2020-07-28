@@ -7,6 +7,7 @@
   >
     <template v-slot:activator="{on}">
       <v-btn
+        id="notification-container"
         icon
         text
         v-on="on"

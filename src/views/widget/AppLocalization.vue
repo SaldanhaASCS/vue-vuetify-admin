@@ -7,6 +7,7 @@
   >
     <template v-slot:activator="{on}">
       <v-btn
+        id="localization-container"
         icon
         text
         v-on="on"

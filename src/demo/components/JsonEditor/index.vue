@@ -19,8 +19,8 @@ export default {
   name: 'JsonEditor',
   props: {
     value: {
-      type: Object,
-      default: () => ({})
+      type: Array,
+      default: () => ([])
     }
   },
   data () {

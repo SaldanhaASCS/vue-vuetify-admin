@@ -227,8 +227,8 @@
               >
                 <v-chip
                   close
-                  :selected="data.selected"
-                  @input="remove(data.item)"
+                  :input-value="data.selected"
+                  @click:close="remove(data.item)"
                 >
                   <strong>{{ data.item }}</strong>&nbsp;
                   <span>(interest)</span>
@@ -257,6 +257,7 @@ export default {
   }),
   methods: {
     remove (item) {
+      console.log(item)
       this.chips.splice(this.chips.indexOf(item), 1)
       this.chips = [...this.chips]
     }

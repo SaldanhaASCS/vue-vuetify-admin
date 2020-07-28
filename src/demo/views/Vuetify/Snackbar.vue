@@ -130,7 +130,7 @@
     >
       {{ text }}
       <v-btn
-        flat
+        text
         icon
         dark
         @click.native="snackbar = false"
