@@ -28,9 +28,7 @@
         cols="12"
       >
         <mark-down-editor
-          v-model="content"
           height="755px"
-          :language="language"
         />
       </v-col>
     </v-row>
