@@ -1,122 +1,170 @@
 <template>
   <v-container class="container--fluid">
     <app-widget
-      title="Complex Table"
+      title="My CRUD"
       padding-hide
     >
       <div slot="widget-content">
-        <v-app-bar
-          card
-          color="white"
+        <v-data-table
+          :headers="headers"
+          :items="desserts"
+          sort-by="calories"
+          class="elevation-1"
         >
-          <v-text-field
-            v-model="search"
-            flat
-            solo
-            prepend-icon="search"
-            placeholder="Type something"
-            hide-details
-            class="hidden-sm-and-down"
-          />
-          <v-btn icon>
-            <v-icon>mdi-filter</v-icon>
-          </v-btn>
-        </v-app-bar>
-        <v-divider />
-        <v-card-text class="pa-0">
-          <v-data-table
-            v-model="complex.selected"
-            :headers="complex.headers"
-            :search="search"
-            :items="complex.items"
-            :rows-per-page-items="[10,25,50,{text: 'All','value': -1}]"
-            class="elevation-1"
-            item-key="name"
-            select-all
-          >
-            <template
-              slot="items"
-              slot-scope="props"
+          <template v-slot:top>
+            <v-toolbar
+              flat
+              color="white"
             >
-              <td>
-                <v-checkbox
-                  v-model="props.selected"
-                  primary
-                  hide-details
-                />
-              </td>
-              <td>
-                <v-avatar size="32">
-                  <img
-                    :src="props.item.avatar"
-                    alt=""
+              <v-toolbar-title>Dessert List</v-toolbar-title>
+              <v-divider
+                class="mx-4"
+                inset
+                vertical
+              />
+              <v-spacer />
+              <v-dialog
+                v-model="dialog"
+                max-width="500px"
+              >
+                <template v-slot:activator="{on, attrs}">
+                  <v-btn
+                    color="primary"
+                    dark
+                    class="mb-2"
+                    v-bind="attrs"
+                    v-on="on"
                   >
-                </v-avatar>
-              </td>
-              <td>{{ props.item.name }}</td>
-              <td>{{ props.item.email }}</td>
-              <td>{{ props.item.phone }}</td>
-              <td>
-                <v-btn
-                  depressed
-                  outlined
-                  icon
-                  fab
-                  dark
-                  color="primary"
-                  small
-                >
-                  <v-icon>edit</v-icon>
-                </v-btn>
-                <v-btn
-                  depressed
-                  outlined
-                  icon
-                  fab
-                  dark
-                  color="pink"
-                  small
-                >
-                  <v-icon>delete</v-icon>
-                </v-btn>
-              </td>
-            </template>
-          </v-data-table>
-        </v-card-text>
+                    New Item
+                  </v-btn>
+                </template>
+                <v-card>
+                  <v-card-title>
+                    <span class="headline">{{ formTitle }}</span>
+                  </v-card-title>
+
+                  <v-card-text>
+                    <v-container>
+                      <v-row>
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="4"
+                        >
+                          <v-text-field
+                            v-model="editedItem.name"
+                            label="Dessert name"
+                          />
+                        </v-col>
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="4"
+                        >
+                          <v-text-field
+                            v-model="editedItem.calories"
+                            label="Calories"
+                          />
+                        </v-col>
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="4"
+                        >
+                          <v-text-field
+                            v-model="editedItem.fat"
+                            label="Fat (g)"
+                          />
+                        </v-col>
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="4"
+                        >
+                          <v-text-field
+                            v-model="editedItem.carbs"
+                            label="Carbs (g)"
+                          />
+                        </v-col>
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="4"
+                        >
+                          <v-text-field
+                            v-model="editedItem.protein"
+                            label="Protein (g)"
+                          />
+                        </v-col>
+                      </v-row>
+                    </v-container>
+                  </v-card-text>
+
+                  <v-card-actions>
+                    <v-spacer />
+                    <v-btn
+                      color="blue darken-1"
+                      text
+                      @click="close"
+                    >
+                      Cancel
+                    </v-btn>
+                    <v-btn
+                      color="blue darken-1"
+                      text
+                      @click="save"
+                    >
+                      Save
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+            </v-toolbar>
+          </template>
+          <template v-slot:item.actions="{item}">
+            <v-icon
+              small
+              class="mr-2"
+              @click="editItem(item)"
+            >
+              mdi-pencil
+            </v-icon>
+            <v-icon
+              small
+              @click="deleteItem(item)"
+            >
+              mdi-delete
+            </v-icon>
+          </template>
+          <template v-slot:no-data>
+            <v-btn
+              color="primary"
+              @click="initialize"
+            >
+              Reset
+            </v-btn>
+          </template>
+        </v-data-table>
       </div>
     </app-widget>
     <br>
     <app-widget
-      title="Basic Table"
+      title="Customizing default rows"
       padding-hide
     >
       <div slot="widget-content">
         <v-data-table
           :headers="basic.headers"
-          :items="basic.items"
-          hide-default-footer
+          :items="basic.desserts"
           class="elevation-1"
         >
-          <template
-            slot="items"
-            slot-scope="props"
-          >
-            <td>{{ props.item.name }}</td>
-            <td class="text-right">
-              {{ props.item.calories }}
-            </td>
-            <td class="text-right">
-              {{ props.item.fat }}
-            </td>
-            <td class="text-right">
-              {{ props.item.carbs }}
-            </td>
-            <td class="text-right">
-              {{ props.item.protein }}
-            </td>
-            <td class="text-right">
-              {{ props.item.iron }}
-            </td>
+          <template v-slot:item.calories="{item}">
+            <v-chip
+              :color="getColor(item.calories)"
+              dark
+            >
+              {{ item.calories }}
+            </v-chip>
           </template>
         </v-data-table>
       </div>
@@ -125,7 +173,6 @@
 </template>
 
 <script>
-import { Items as Users } from '@/demo/api/mock_user'
 import AppWidget from '@/views/widget/AppWidget.vue'
 
 export default {
@@ -134,38 +181,42 @@ export default {
     AppWidget
   },
   data: () => ({
-    search: '',
-    complex: {
-      selected: [],
-      headers: [
-        {
-          text: 'Avatar',
-          value: 'avatar'
-        },
-        {
-          text: 'Name',
-          value: 'name'
-        },
-        {
-          text: 'Email',
-          value: 'email'
-        },
-        {
-          text: 'Phone',
-          value: 'phone'
-        },
-        {
-          text: 'Action',
-          value: ''
-        }
-      ],
-      items: Users
+    dialog: false,
+    headers: [
+      {
+        text: 'Dessert (100g serving)',
+        align: 'start',
+        sortable: false,
+        value: 'name'
+      },
+      { text: 'Calories', value: 'calories' },
+      { text: 'Fat (g)', value: 'fat' },
+      { text: 'Carbs (g)', value: 'carbs' },
+      { text: 'Protein (g)', value: 'protein' },
+      { text: 'Actions', value: 'actions', sortable: false }
+    ],
+    desserts: [],
+    editedIndex: -1,
+    editedItem: {
+      name: '',
+      calories: 0,
+      fat: 0,
+      carbs: 0,
+      protein: 0
     },
+    defaultItem: {
+      name: '',
+      calories: 0,
+      fat: 0,
+      carbs: 0,
+      protein: 0
+    },
+
     basic: {
       headers: [
         {
           text: 'Dessert (100g serving)',
-          align: 'left',
+          align: 'start',
           sortable: false,
           value: 'name'
         },
@@ -175,9 +226,8 @@ export default {
         { text: 'Protein (g)', value: 'protein' },
         { text: 'Iron (%)', value: 'iron' }
       ],
-      items: [
+      desserts: [
         {
-          value: false,
           name: 'Frozen Yogurt',
           calories: 159,
           fat: 6.0,
@@ -186,7 +236,6 @@ export default {
           iron: '1%'
         },
         {
-          value: false,
           name: 'Ice cream sandwich',
           calories: 237,
           fat: 9.0,
@@ -195,7 +244,6 @@ export default {
           iron: '1%'
         },
         {
-          value: false,
           name: 'Eclair',
           calories: 262,
           fat: 16.0,
@@ -204,7 +252,6 @@ export default {
           iron: '7%'
         },
         {
-          value: false,
           name: 'Cupcake',
           calories: 305,
           fat: 3.7,
@@ -213,7 +260,6 @@ export default {
           iron: '8%'
         },
         {
-          value: false,
           name: 'Gingerbread',
           calories: 356,
           fat: 16.0,
@@ -222,7 +268,6 @@ export default {
           iron: '16%'
         },
         {
-          value: false,
           name: 'Jelly bean',
           calories: 375,
           fat: 0.0,
@@ -231,7 +276,6 @@ export default {
           iron: '0%'
         },
         {
-          value: false,
           name: 'Lollipop',
           calories: 392,
           fat: 0.2,
@@ -240,7 +284,6 @@ export default {
           iron: '2%'
         },
         {
-          value: false,
           name: 'Honeycomb',
           calories: 408,
           fat: 3.2,
@@ -249,7 +292,6 @@ export default {
           iron: '45%'
         },
         {
-          value: false,
           name: 'Donut',
           calories: 452,
           fat: 25.0,
@@ -258,7 +300,6 @@ export default {
           iron: '22%'
         },
         {
-          value: false,
           name: 'KitKat',
           calories: 518,
           fat: 26.0,
@@ -268,6 +309,131 @@ export default {
         }
       ]
     }
-  })
+  }),
+
+  computed: {
+    formTitle () {
+      return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+    }
+  },
+
+  watch: {
+    dialog (val) {
+      val || this.close()
+    }
+  },
+
+  created () {
+    this.initialize()
+  },
+  methods: {
+    initialize () {
+      this.desserts = [
+        {
+          name: 'Frozen Yogurt',
+          calories: 159,
+          fat: 6.0,
+          carbs: 24,
+          protein: 4.0
+        },
+        {
+          name: 'Ice cream sandwich',
+          calories: 237,
+          fat: 9.0,
+          carbs: 37,
+          protein: 4.3
+        },
+        {
+          name: 'Eclair',
+          calories: 262,
+          fat: 16.0,
+          carbs: 23,
+          protein: 6.0
+        },
+        {
+          name: 'Cupcake',
+          calories: 305,
+          fat: 3.7,
+          carbs: 67,
+          protein: 4.3
+        },
+        {
+          name: 'Gingerbread',
+          calories: 356,
+          fat: 16.0,
+          carbs: 49,
+          protein: 3.9
+        },
+        {
+          name: 'Jelly bean',
+          calories: 375,
+          fat: 0.0,
+          carbs: 94,
+          protein: 0.0
+        },
+        {
+          name: 'Lollipop',
+          calories: 392,
+          fat: 0.2,
+          carbs: 98,
+          protein: 0
+        },
+        {
+          name: 'Honeycomb',
+          calories: 408,
+          fat: 3.2,
+          carbs: 87,
+          protein: 6.5
+        },
+        {
+          name: 'Donut',
+          calories: 452,
+          fat: 25.0,
+          carbs: 51,
+          protein: 4.9
+        },
+        {
+          name: 'KitKat',
+          calories: 518,
+          fat: 26.0,
+          carbs: 65,
+          protein: 7
+        }
+      ]
+    },
+
+    editItem (item) {
+      this.editedIndex = this.desserts.indexOf(item)
+      this.editedItem = Object.assign({}, item)
+      this.dialog = true
+    },
+
+    deleteItem (item) {
+      const index = this.desserts.indexOf(item)
+      confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
+    },
+
+    close () {
+      this.dialog = false
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
+    },
+
+    save () {
+      if (this.editedIndex > -1) {
+        Object.assign(this.desserts[this.editedIndex], this.editedItem)
+      } else {
+        this.desserts.push(this.editedItem)
+      }
+      this.close()
+    },
+    getColor (calories) {
+      if (calories > 400) return 'red'
+      else if (calories > 200) return 'orange'
+      else return 'green'
+    }
+  }
 }
 </script>
