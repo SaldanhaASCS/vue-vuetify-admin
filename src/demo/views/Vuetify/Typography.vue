@@ -2,76 +2,93 @@
   <v-container class="container--fluid">
     <app-widget title="Basic Usage">
       <div slot="widget-content">
-        <div class="component-example">
-          <div class="component-example__container">
-            <dl class="headings">
-              <v-col>
-                <div class="display-4 grey--text text--darken-1">
-                  Light 112sp
-                </div>
-                <strong>.display-4</strong>
-                <span>font-weight 300</span>
-              </v-col>
-              <dd>
-                <div class="display-3 grey--text text--darken-1">
-                  Regular 56sp
-                </div>
-                <strong>.display-3</strong>
-                <span>font-weight 400</span>
-              </dd>
-              <dd>
-                <div class="display-2 grey--text text--darken-1">
-                  Regular 45sp
-                </div>
-                <strong>.display-2</strong>
-                <span>font-weight 400</span>
-              </dd>
-              <dd>
-                <div class="display-1 grey--text text--darken-1">
-                  Regular 34sp
-                </div>
-                <strong>.display-1</strong>
-                <span>font-weight 400</span>
-              </dd>
-              <dd>
-                <div class="headline grey--text text--darken-1">
-                  Regular 24sp
-                </div>
-                <strong>.headline</strong><span>font-weight 400</span>
-              </dd>
-              <dd>
-                <div class="title grey--text text--darken-1">
-                  Medium 20sp
-                </div>
-                <strong>.title</strong><span>font-weight 500</span>
-              </dd>
-              <dd>
-                <div class="subheading grey--text text--darken-1">
-                  Regular 16sp
-                </div>
-                <strong>.subheading</strong><span>font-weight 400</span>
-              </dd>
-              <dd>
-                <div class="body-2 grey--text text--darken-1">
-                  Medium 14sp
-                </div>
-                <strong>.body-2</strong><span>font-weight 500</span>
-              </dd>
-              <dd>
-                <div class="body-1 grey--text text--darken-1">
-                  Regular 14sp
-                </div>
-                <strong>.body-1</strong><span>font-weight 400</span>
-              </dd>
-              <dd>
-                <div class="caption grey--text text--darken-1">
-                  Regular 12sp
-                </div>
-                <strong>.caption</strong><span>font-weight 400</span>
-              </dd>
-            </dl>
-          </div>
-        </div>
+        <v-item-group mandatory>
+          <v-sheet
+            class="overflow-y-auto"
+            max-height="600"
+            tile
+          >
+            <v-item
+              v-for="[
+                c,
+                text,
+                size,
+                weight,
+                spacing,
+                margin
+              ] in classes"
+              :key="c"
+            >
+              <template v-slot="{active, toggle}">
+                <v-sheet
+                  :color="active ? 'grey lighten-4' : undefined"
+                  class="px-4 pt-4 pb-3"
+                  tile
+                  style="cursor: pointer;"
+                  @click="toggle"
+                >
+                  <div
+                    :class="[`text-${c}`, active && `mb-${margin}`]"
+                    class="transition-swing"
+                    v-text="text"
+                  />
+
+                  <v-expand-transition>
+                    <v-responsive
+                      v-if="active"
+                      max-width="350"
+                    >
+                      <div class="d-flex justify-space-between caption">
+                        <div>
+                          <div class="grey--text mb-2">
+                            Font
+                          </div>
+
+                          <div class="font-weight-medium">
+                            Roboto
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="grey--text mb-2">
+                            Weight
+                          </div>
+
+                          <div
+                            class="font-weight-medium"
+                            v-text="weight"
+                          />
+                        </div>
+
+                        <div>
+                          <div class="grey--text mb-2">
+                            Size
+                          </div>
+
+                          <div
+                            class="font-weight-medium"
+                            v-text="size"
+                          />
+                        </div>
+
+                        <div>
+                          <div class="grey--text text-darken-1 mb-2">
+                            Letter spacing
+                          </div>
+
+                          <div
+                            class="font-weight-medium"
+                            v-text="spacing"
+                          />
+                        </div>
+                      </div>
+                    </v-responsive>
+                  </v-expand-transition>
+                </v-sheet>
+              </template>
+            </v-item>
+          </v-sheet>
+        </v-item-group>
       </div>
     </app-widget>
   </v-container>
@@ -85,6 +102,23 @@ export default {
   components: {
     AppWidget
   },
-  data: () => ({})
+  data: () => ({
+    model: null,
+    classes: [
+      ['h1', '.text-(xs | sm | md | lg | xl)-h1', '6rem', '300', '-0.09375rem', -1],
+      ['h2', '.text-(xs | sm | md | lg | xl)-h2', '3.75rem', '300', '-0.03125rem', 0],
+      ['h3', '.text-(xs | sm | md | lg | xl)-h3', '3rem', '400', 'normal', 1],
+      ['h4', '.text-(xs | sm | md | lg | xl)-h4', '2.125rem', '400', '0.015625rem', 2],
+      ['h5', '.text-(xs | sm | md | lg | xl)-h5', '1.5rem', '400', 'normal', 2],
+      ['h6', '.text-(xs | sm | md | lg | xl)-h6', '1.25rem', '500', '0.009375rem', 3],
+      ['subtitle-1', '.text-(xs | sm | md | lg | xl)-subtitle-1', '1rem', '400', '0.009375rem', 4],
+      ['subtitle-2', '.text-(xs | sm | md | lg | xl)-subtitle-2', '0.875rem', '500', '0.00625rem', 4],
+      ['body-1', '.text-(xs | sm | md | lg | xl)-body-1', '1rem', '400', '0.03125rem', 4],
+      ['body-2', '.text-(xs | sm | md | lg | xl)-body-2', '0.875rem', '400', '0.015625rem', 4],
+      ['button', '.text-(xs | sm | md | lg | xl)-button', '0.875rem', '500', '0.078125rem', 4],
+      ['caption', '.text-(xs | sm | md | lg | xl)-caption', '0.75rem', '400', '0.025rem', 4],
+      ['overline', '.text-(xs | sm | md | lg | xl)-overline', '0.75rem', '500', '0.1666666667em', 4]
+    ]
+  })
 }
 </script>
