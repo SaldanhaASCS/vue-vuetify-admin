@@ -27,7 +27,10 @@
                       v-for="(item, index) in material"
                       :key="index"
                     >
-                      <i class="icon material-icons"> {{ item.ligature }}</i>
+                      <v-icon>
+                        mdi-{{ item.ligature }}
+                      </v-icon>
+                      {{ item.ligature }}
                     </li>
                   </ul>
                   <div class="text-sm-center">
@@ -54,7 +57,7 @@
                       <i
                         class="fa"
                         :class="item"
-                      />
+                      >{{ item }}</i>
                     </li>
                   </ul>
                   <div class="text-sm-center">
@@ -111,6 +114,8 @@ export default {
 </script>
 
 <style scoped>
+@import '~font-awesome/css/font-awesome.min.css';
+
 .demo-icons-list {
     display: -webkit-box;
     display: flex;
@@ -118,7 +123,7 @@ export default {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 32px
+    font-size: 22px
 }
 
 .demo-icons-list li {
@@ -130,8 +135,6 @@ export default {
     justify-content: center;
     margin-right: 20px;
     margin-bottom: 20px;
-    width: 72px;
-    height: 72px;
     text-align: center;
     cursor: pointer;
     -webkit-transition: .1s;
