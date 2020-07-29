@@ -23,12 +23,10 @@
             <v-date-picker
               v-model="picker"
               landscape
-              full-width
               color="green lighten-1"
             />
             <v-date-picker
               v-model="picker"
-              full-width
               color="primary lighten-1"
               class="mt-3"
             />
@@ -58,22 +56,23 @@
             <v-menu
               ref="menu"
               v-model="menu"
-              lazy
               :close-on-content-click="false"
               transition="scale-transition"
               offset-y
-              full-width
               :nudge-right="40"
               min-width="290px"
               :return-value.sync="date"
             >
-              <v-text-field
-                slot="activator"
-                v-model="date"
-                label="Picker in menu"
-                prepend-icon="mdi-calendar"
-                readonly
-              />
+              <template v-slot:activator="{on, attrs}">
+                <v-text-field
+                  v-model="date"
+                  label="Picker in menu"
+                  prepend-icon="mdi-calendar"
+                  readonly
+                  v-bind="attrs"
+                  v-on="on"
+                />
+              </template>
               <v-date-picker
                 v-model="date"
                 no-title
@@ -101,18 +100,19 @@
               ref="dialog"
               v-model="modal"
               persistent
-              lazy
-              full-width
               width="290px"
               :return-value.sync="date"
             >
-              <v-text-field
-                slot="activator"
-                v-model="date"
-                label="Picker in dialog"
-                prepend-icon="mdi-calendar"
-                readonly
-              />
+              <template v-slot:activator="{on, attrs}">
+                <v-text-field
+                  v-model="date"
+                  label="Picker in menu"
+                  prepend-icon="mdi-calendar"
+                  readonly
+                  v-bind="attrs"
+                  v-on="on"
+                />
+              </template>
               <v-date-picker
                 v-model="date"
                 scrollable
@@ -143,7 +143,6 @@
           <div slot="widget-content">
             <v-date-picker
               v-model="date1"
-              full-width
               event-color="green lighten-1"
               :events="arrayEvents"
             />
