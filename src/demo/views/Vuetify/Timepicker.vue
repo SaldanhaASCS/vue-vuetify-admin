@@ -27,7 +27,7 @@
             <v-time-picker
               v-model="picker"
               landscape
-              full-width
+
               color="green lighten-1"
             />
           </div>
@@ -51,22 +51,23 @@
                   <v-menu
                     ref="menu"
                     v-model="menu"
-                    lazy
                     :close-on-content-click="false"
                     transition="scale-transition"
                     offset-y
-                    full-width
                     :nudge-right="40"
                     min-width="290px"
                     :return-value.sync="date"
                   >
-                    <v-text-field
-                      slot="activator"
-                      v-model="date"
-                      label="Picker in menu"
-                      prepend-icon="mdi-calendar"
-                      readonly
-                    />
+                    <template v-slot:activator="{on, attrs}">
+                      <v-text-field
+                        v-model="date"
+                        label="Picker in menu"
+                        prepend-icon="mdi-calendar"
+                        readonly
+                        v-bind="attrs"
+                        v-on="on"
+                      />
+                    </template>
                     <v-time-picker
                       v-model="date"
                       no-title
@@ -74,14 +75,14 @@
                     >
                       <v-spacer />
                       <v-btn
-                        flat
+                        text
                         color="primary"
                         @click="menu = false"
                       >
                         Cancel
                       </v-btn>
                       <v-btn
-                        flat
+                        text
                         color="primary"
                         @click="$refs.menu.save(date)"
                       >
@@ -99,32 +100,34 @@
                     ref="dialog"
                     v-model="modal"
                     persistent
-                    lazy
-                    full-width
+
                     width="290px"
                     :return-value.sync="date"
                   >
-                    <v-text-field
-                      slot="activator"
-                      v-model="date"
-                      label="Picker in dialog"
-                      prepend-icon="mdi-calendar"
-                      readonly
-                    />
+                    <template v-slot:activator="{on, attrs}">
+                      <v-text-field
+                        v-model="date"
+                        label="Picker in menu"
+                        prepend-icon="mdi-calendar"
+                        readonly
+                        v-bind="attrs"
+                        v-on="on"
+                      />
+                    </template>
                     <v-time-picker
                       v-model="date"
                       scrollable
                     >
                       <v-spacer />
                       <v-btn
-                        flat
+                        text
                         color="primary"
                         @click="modal = false"
                       >
                         Cancel
                       </v-btn>
                       <v-btn
-                        flat
+                        text
                         color="primary"
                         @click="$refs.dialog.save(date)"
                       >
