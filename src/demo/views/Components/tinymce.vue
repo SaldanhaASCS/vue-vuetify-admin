@@ -24,8 +24,10 @@
         class="flex-grow-1"
         cols="12"
       >
+        <!-- TODO: Criar conta https://www.tiny.cloud/ e inserir API-KEY -->
         <tinymce
           v-model="content"
+          api-key=""
           :init="options"
         />
       </v-col>
@@ -33,9 +35,12 @@
         class="flex-grow-1"
         cols="12"
       >
+        <div class="text-h4">
+          HTML content that will be saved in the Database.
+        </div><hr>
         <div class="editor-content">
           {{ content }}
-        </div>
+        </div><hr>
       </v-col>
     </v-row>
   </v-container>
@@ -44,7 +49,6 @@
 <script>
 import Tinymce from '@tinymce/tinymce-vue'
 // import EditorImage from '@/components/Tinymce/EditorImage.vue';
-import { mapGetters } from 'vuex'
 import plugins from '@/demo/components/Tinymce/plugins'
 import toolbar from '@/demo/components/Tinymce/toolbar'
 
@@ -75,10 +79,10 @@ export default {
           </li>
         </ul>`,
       options: {
-        height: 400,
-        language: this.language,
+        height: 700,
+        language: { en: 'en_US', zh: 'zh_CN', ru: 'ru' }[this.$i18n.locale],
         // language cnd URL
-        language_url: 'https://cdn.jsdelivr.net/npm/tinymce-lang/langs/ru.js',
+        language_url: 'https://cdn.jsdelivr.net/npm/tinymce-lang/langs/en_US.js',
         body_class: 'panel-body',
         object_resizing: false,
         menubar: 'file edit insert view format table',
@@ -96,11 +100,6 @@ export default {
         nonbreaking_force_tab: true
       }
     }
-  },
-  computed: {
-    ...mapGetters([
-      'language'
-    ])
   }
 }
 </script>
