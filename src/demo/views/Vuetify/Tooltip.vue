@@ -6,10 +6,11 @@
           <div slot="widget-content">
             <div class="text-center flex-grow-1 align-center">
               <v-tooltip bottom>
-                <template v-slot:activator="{on}">
+                <template v-slot:activator="{on, attrs}">
                   <v-btn
-                    dark
                     color="primary"
+                    dark
+                    v-bind="attrs"
                     v-on="on"
                   >
                     Button
@@ -18,10 +19,11 @@
                 <span>Tooltip</span>
               </v-tooltip>
               <v-tooltip bottom>
-                <template v-slot:activator="{on}">
+                <template v-slot:activator="{on, attrs}">
                   <v-icon
-                    dark
                     color="primary"
+                    dark
+                    v-bind="attrs"
                     v-on="on"
                   >
                     mdi-home
@@ -30,7 +32,12 @@
                 <span>Tooltip</span>
               </v-tooltip>
               <v-tooltip bottom>
-                <span slot="activator">This text has a tooltip</span>
+                <template v-slot:activator="{on, attrs}">
+                  <span
+                    v-bind="attrs"
+                    v-on="on"
+                  >This text has a tooltip</span>
+                </template>
                 <span>Tooltip</span>
               </v-tooltip>
             </div>
