@@ -37,7 +37,7 @@ const permission = {
   },
 
   getters: {
-    permissionRoutes: (state) => state.routes // Rotas do menu lateral
+    permissionRoutes: (state) => state.routes // Routes that will be displayed in the side menu.
   },
 
   mutations: {

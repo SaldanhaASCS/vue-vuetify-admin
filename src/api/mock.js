@@ -20,8 +20,8 @@ export const userAdmin = {
   code: '',
   token: '3b759a9ca80234563d87672350659b2b',
   name: 'Admin',
-  avatar: 'https://avatars.githubusercontent.com/u/13101802',
-  roles: ['admin', 'editor']
+  avatar: 'https://avatars1.githubusercontent.com/u/35805817?s=460&u=45bcb6a78d52306f7affc245c2d55e38b586c9c6&v=4',
+  roles: ['admin', 'editor', 'visitor'] // Determines which routes are displayed in the side menu.
 }
 
 export const userEditor = {
@@ -32,7 +32,7 @@ export const userEditor = {
   code: '',
   token: '09d0a5b30b267c2504fadd43348fbba3',
   name: 'Editor Name',
-  avatar: '',
+  avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6_dXRBg2AgAHroCKU_I___QhM__nSAdV8Ww&usqp=CAU',
   roles: ['editor']
 }
 
@@ -44,6 +44,6 @@ export const userVisitor = {
   code: '',
   token: '19d0a5b30b267c2504fadd43348fbba3',
   name: 'Visitor Name',
-  avatar: '',
+  avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsjSA06kBMwSkJckjzqobaCuRjPStOERjuOQ&usqp=CAU',
   roles: ['visitor']
 }
