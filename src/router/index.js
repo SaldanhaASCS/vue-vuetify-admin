@@ -52,7 +52,7 @@ export const constantRoutes = [
         component: () => import('@/views/components/Dashboard/index'),
         name: 'Dashboard',
         meta: {
-          title: 'route.dashboard', icon: 'mdi-view-dashboard', noCache: true, affix: true
+          title: 'route.dashboard', icon: 'mdi-view-dashboard', noCache: true, affix: true, requiresAuth: true
         }
       }
     ]
@@ -66,7 +66,7 @@ export const constantRoutes = [
         component: () => import('@/views/components/Documentation'),
         name: 'Documentation',
         meta: {
-          title: 'route.documentation', icon: 'mdi-text-subject', noCache: true, affix: true
+          title: 'route.documentation', icon: 'mdi-text-subject', noCache: true, affix: true, requiresAuth: true
         }
       }
     ]
@@ -80,7 +80,7 @@ export const constantRoutes = [
         component: () => import('@/views/components/Guide'),
         name: 'Guide',
         meta: {
-          title: 'route.guide', icon: 'mdi-near-me', noCache: true, affix: true
+          title: 'route.guide', icon: 'mdi-near-me', noCache: true, affix: true, requiresAuth: true
         }
       }
     ]
@@ -94,10 +94,7 @@ export const constantRoutes = [
         component: () => import('@/views/components/Roadmap'),
         name: 'Roadmap',
         meta: {
-          title: 'route.roadmap',
-          icon: 'mdi-timeline-text',
-          noCache: true,
-          affix: true
+          title: 'route.roadmap', icon: 'mdi-timeline-text', noCache: true, affix: true, requiresAuth: true
         }
       }
     ]
@@ -110,7 +107,7 @@ export const constantRoutes = [
         path: '/theme',
         component: () => import('@/views/components/Theme.vue'),
         name: 'Theme',
-        meta: { title: 'route.theme', icon: 'mdi-palette' }
+        meta: { title: 'route.theme', icon: 'mdi-palette', requiresAuth: true }
       }
     ]
   },
@@ -122,7 +119,7 @@ export const constantRoutes = [
         path: '/i18n',
         component: () => import('@/views/components/I18n.vue'),
         name: 'I18n',
-        meta: { title: 'route.i18n', icon: 'mdi-translate' }
+        meta: { title: 'route.i18n', icon: 'mdi-translate', requiresAuth: true }
       }
     ]
   },
