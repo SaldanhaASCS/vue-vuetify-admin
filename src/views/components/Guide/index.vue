@@ -142,7 +142,6 @@ export default {
   },
   methods: {
     guide () {
-      console.log(steps)
       this.driver.defineSteps(steps)
       this.driver.start()
     }

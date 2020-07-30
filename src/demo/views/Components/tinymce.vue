@@ -81,8 +81,7 @@ export default {
       options: {
         height: 700,
         language: { en: 'en_US', zh: 'zh_CN', ru: 'ru' }[this.$i18n.locale],
-        // language cnd URL
-        language_url: 'https://cdn.jsdelivr.net/npm/tinymce-lang/langs/en_US.js',
+        // language_url: `https://cdn.jsdelivr.net/npm/tinymce-lang/langs/${{ en: 'en_US', zh: 'zh_CN', ru: 'ru' }[this.$i18n.locale]}.js`,
         body_class: 'panel-body',
         object_resizing: false,
         menubar: 'file edit insert view format table',

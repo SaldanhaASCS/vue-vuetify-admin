@@ -10,7 +10,6 @@
         :color="headerColor"
         :dense="toolbarDense"
       >
-        <v-toolbar-side-icon />
         <v-toolbar-title>{{ headerText }}</v-toolbar-title>
         <v-spacer />
         <v-btn icon>
@@ -27,7 +26,6 @@
         <template v-for="(item, index) in list">
           <div :key="item.id">
             <v-list-item
-              avatar
               ripple
             >
               <v-list-item-content>
