@@ -196,7 +196,7 @@ const componentsRouter = [
     component: Layout,
     children: [
       {
-        path: 'https://github.com/NelsonEAX/vue-vuetify-admin',
+        path: 'https://github.com/SaldanhaASCS/vue-vuetify-admin',
         meta: { title: 'route.externalLink', icon: 'link' }
       }
     ]

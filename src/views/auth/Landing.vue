@@ -258,17 +258,12 @@
                 target="_blank"
               >Vuetify</a>
               Paralax Them by
-              <a
-                class="white--text"
-                href="https://github.com/vwxyzjn"
-                target="_blank"
-              >Costa Huang</a>
               {{ info.title }} by
               <a
                 class="white--text"
-                href="https://nelsoneax.github.io"
+                href="https://github.com/SaldanhaASCS"
                 target="_blank"
-              >NelsonEAX</a>
+              >SaldanhaASCS</a>
             </div>
           </v-col>
         </v-row>

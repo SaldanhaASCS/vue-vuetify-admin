@@ -4,7 +4,7 @@
   "version": "0.3.0",
   "private": true,
   "description": "Admin template based on Vue and Vuetify",
-  "author": "NelsonEAX <nelsoneax@gmail.com>",
+  "author": "SaldanhaASCS <saldanhaascs@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
