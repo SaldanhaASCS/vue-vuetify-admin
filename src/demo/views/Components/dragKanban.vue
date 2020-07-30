@@ -25,21 +25,21 @@
         :key="1"
         :list="items1"
         :options="{group: 'kanban', class: 'v-list two-line'}"
-        header-text="Kanban1"
-        header-color="pink"
+        header-text="TO DO"
+        header-color="orange"
       />
       <kanban
         :key="2"
         :list="items2"
         :options="{group: 'kanban', class: 'v-list two-line'}"
-        header-text="Kanban2"
+        header-text="IN PROGRESS"
         header-color="blue"
       />
       <kanban
         :key="3"
         :list="items3"
         :options="{group: 'kanban', class: 'v-list two-line'}"
-        header-text="Kanban3"
+        header-text="DONE"
         header-color="green"
       />
     </draggable>
