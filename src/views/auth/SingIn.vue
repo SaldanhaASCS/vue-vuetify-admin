@@ -58,12 +58,19 @@
                     color="warning"
                     @click="setUserToLogin(0)"
                   >
-                    <span>editor</span>
+                    <span>visitor</span>
                   </v-btn>
                   <v-btn
                     text
                     color="warning"
                     @click="setUserToLogin(1)"
+                  >
+                    <span>editor</span>
+                  </v-btn>
+                  <v-btn
+                    text
+                    color="warning"
+                    @click="setUserToLogin(2)"
                   >
                     <span>admin</span>
                   </v-btn>
@@ -111,7 +118,7 @@
 </template>
 
 <script>
-import { userAdmin, userEditor } from '@/api/mock'
+import { userAdmin, userEditor, userVisitor } from '@/api/mock'
 import Localization from '../widget/AppLocalization.vue'
 
 export default {
@@ -133,12 +140,15 @@ export default {
       await this.$router.push(this.$route.query.redirect || '/')
     },
     setUserToLogin (id) {
-      if (id) {
+      if (id === 2) {
         this.model.email = userAdmin.email
         this.model.password = userAdmin.password
-      } else {
+      } else if (id === 1) {
         this.model.email = userEditor.email
         this.model.password = userEditor.password
+      } else {
+        this.model.email = userVisitor.email
+        this.model.password = userVisitor.password
       }
     }
   }

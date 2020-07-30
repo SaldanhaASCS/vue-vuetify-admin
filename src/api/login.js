@@ -1,10 +1,10 @@
 /**
  * Vuetify theme options.
  */
-import { userAdmin, userEditor } from '@/api/mock'
+import { userAdmin, userEditor, userVisitor } from '@/api/mock'
 
 /**
- * Login by email and password
+ * Checa se email e senha é o mesmo que está no banco de dados "@/api/mock.js"
  *
  * @param {String} email user email
  * @param {String} password user password
@@ -17,6 +17,8 @@ export const loginByEmail = async (email, password) => {
       user = userEditor
     } else if (userAdmin.email === email && userAdmin.password === password) {
       user = userAdmin
+    } else if (userVisitor.email === email && userVisitor.password === password) {
+      user = userVisitor
     }
     if (!user || !user.token) {
       throw new Error('User is not found')

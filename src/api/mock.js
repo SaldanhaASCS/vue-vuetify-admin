@@ -9,17 +9,17 @@ export const landingInfo = {
   title: 'Vue Vuetify Admin',
   email: 'example@mail.com',
   phone: '+79876543210',
-  adres: 'Yekaterinburg'
+  address: 'Yekaterinburg'
 }
 
 export const userAdmin = {
   email: 'admin@vvadmin.io',
   password: 'abcd1234',
-  user: 'NelsonEAX',
+  user: 'Admin',
   status: 'admin',
   code: '',
   token: '3b759a9ca80234563d87672350659b2b',
-  name: 'Nikolaev Nikolay',
+  name: 'Admin',
   avatar: 'https://avatars.githubusercontent.com/u/13101802',
   roles: ['admin', 'editor']
 }
@@ -28,10 +28,22 @@ export const userEditor = {
   email: 'editor@vvadmin.io',
   password: 'abcd1234',
   user: 'Editor',
-  status: '',
+  status: 'Editor',
   code: '',
   token: '09d0a5b30b267c2504fadd43348fbba3',
   name: 'Editor Name',
   avatar: '',
   roles: ['editor']
+}
+
+export const userVisitor = {
+  email: 'visitor@vvadmin.io',
+  password: 'abcd1234',
+  user: 'Visitor',
+  status: 'Visitor',
+  code: '',
+  token: '19d0a5b30b267c2504fadd43348fbba3',
+  name: 'Visitor Name',
+  avatar: '',
+  roles: ['visitor']
 }

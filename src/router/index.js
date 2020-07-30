@@ -126,18 +126,7 @@ export const constantRoutes = [
       }
     ]
   },
-
-  ...authRouter
-]
-
-export default new Router({
-  mode: 'history',
-  scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes
-})
-
-export const asyncRoutes = [
-  /** When your routing table is too long, you can split it into small modules */
+  ...authRouter,
   permissionRouter,
   vuetifyRouter,
   ...componentsRouter,
@@ -145,3 +134,9 @@ export const asyncRoutes = [
   errorsRouter,
   { path: '*', redirect: '/error/404', hidden: true }
 ]
+
+export default new Router({
+  mode: 'history',
+  scrollBehavior: () => ({ y: 0 }),
+  routes: constantRoutes
+})

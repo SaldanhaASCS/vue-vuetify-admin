@@ -29,9 +29,9 @@
               class="blue lighten-2 mt-5"
               dark
               large
-              to="/singin"
+              to="/login"
             >
-              Get Started
+              Go to Login
             </v-btn>
           </v-row>
         </v-parallax>

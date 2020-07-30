@@ -10,7 +10,8 @@ const componentsRouter = [
     name: 'ComponentDemo',
     meta: {
       title: 'route.components',
-      icon: 'mdi-view-module'
+      icon: 'mdi-view-module',
+      roles: ['admin']
     },
     children: [
       {
@@ -76,7 +77,8 @@ const componentsRouter = [
     name: 'Charts',
     meta: {
       title: 'route.charts',
-      icon: 'mdi-chart-bar'
+      icon: 'mdi-chart-bar',
+      roles: ['admin']
     },
     children: [
       {

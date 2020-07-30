@@ -12,6 +12,8 @@ import vuetify from '@/locale/vuetify'
 import en from './en_US'
 import zh from './zh_CN'
 import ru from './ru_RU'
+import pt from './pt_BR'
+import es from './es_ES'
 
 Vue.use(VueI18n)
 
@@ -20,6 +22,10 @@ const messages = {
     ...en,
     $vuetify: vuetify.en
   },
+  es: {
+    ...es,
+    $vuetify: vuetify.es
+  },
   zh: {
     ...zh,
     $vuetify: vuetify.zh
@@ -27,6 +33,10 @@ const messages = {
   ru: {
     ...ru,
     $vuetify: vuetify.ru
+  },
+  pt: {
+    ...pt,
+    $vuetify: vuetify.pt
   }
 }
 
@@ -40,14 +50,24 @@ export const locales = [
     abbr: 'ENG'
   },
   {
-    title: '中文',
-    locale: 'zh',
-    abbr: 'CHN'
+    title: 'Español',
+    locale: 'es',
+    abbr: 'ESP'
+  },
+  {
+    title: 'Português',
+    locale: 'pt',
+    abbr: 'BRA'
   },
   {
     title: 'Русский',
     locale: 'ru',
     abbr: 'RUS'
+  },
+  {
+    title: '中文',
+    locale: 'zh',
+    abbr: 'CHN'
   }
 ]
 
@@ -55,7 +75,7 @@ export const locales = [
  * VueI18n instance
  */
 const i18n = new VueI18n({
-  // set locale options: en_US | zh_CN | ru_RU
+  // set locale options: en_US | zh_CN | ru_RU | pt_BR | es_ES
   locale: settings.locale,
   // set locale messages
   messages

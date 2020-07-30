@@ -9,7 +9,8 @@ const vuetifyRouter = {
   name: 'VuetifyDemo',
   meta: {
     title: 'route.vuetify',
-    icon: 'mdi-vuetify'
+    icon: 'mdi-vuetify',
+    roles: ['admin']
   },
   children: [
     {
