@@ -3,6 +3,8 @@ import user from '@/store/modules/user'
 import settings from '@/store/modules/settings'
 
 /**
+ * Esse arquivo permite resgatar em localStorage as informações do usuário que são perdidas
+ * do Vuex quando é executado o refresh da página.
  * Vuex plugin for save and sync 'settings' and 'user' from vuex modules.
  */
 class SyncStorage {
@@ -139,12 +141,17 @@ class SyncStorage {
   }
 
   /**
-   * Get user info from storage.
+   * A cada refresh na página ocorre busca de informações do Usuário em localStorage.
+   * Faz logout se o TTL do localStorage for menor que TTL da hora atual.
+   * O TTL do localStorage foi definido em 60 seg em '@/config'
    */
   initUserState (store) {
     const userTTL = parseInt(this.getFromStorage(`${this.prefix}ttl`) || 0, 10)
+    console.log('TTL_Expiração->', userTTL, 'TTL_atual->', this.getSeconds())
+    console.log(parseInt(0, 10))
     if (userTTL < this.getSeconds()) {
       console.warn('[vuex.SyncStorage] Session expired')
+      // Remove todas as informações do Usuário e como não terá mais token, será redirecionado pro login
       store.commit('SET_USER_INFO', { logout: true })
       return false
     }
