@@ -18,7 +18,7 @@
           tile
         >
           <img
-            src="img/icons/android-icon-36x36.png"
+            :src="`${host}/img/icons/android-icon-36x36.png`"
             alt="VVA"
           >
         </v-avatar>
@@ -42,7 +42,9 @@ export default {
   components: {
     TheLayoutDrawerList
   },
-  data: () => ({}),
+  data: () => ({
+    host: window.location.origin
+  }),
   computed: {
     ...mapGetters([
       'permissionRoutes',
