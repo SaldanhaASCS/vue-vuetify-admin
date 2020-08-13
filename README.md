@@ -39,7 +39,7 @@ large complex Single-Page Applications. I believe whatever your needs are, this 
 
 - [Preview](https://github.com/SaldanhaASCS/vue-vuetify-admin)
 
-**The current version is `v0.0.3-alpha` build on `vue-cli`. If you find a problem, please put 
+**The current version is `v0.3.0` build on `vue-cli`. If you find a problem, please put 
 [issue](https://github.com/SaldanhaASCS/vue-vuetify-admin/issues/new).**
 
 **This project does not support low version browsers (e.g. IE). Please add polyfill by yourself.**
