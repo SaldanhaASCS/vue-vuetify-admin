@@ -6,6 +6,17 @@ function resolve (dir) {
 }
 
 module.exports = {
+  devServer: {
+    /**
+     * Criação automática de certificado auto-assinado para ambiente de desenvolvimento
+     * Referencia: https://webpack.js.org/configuration/dev-server/#devserverhttps
+     *
+     * Outra opção é adicionar --https em "vue-cli-service serve" no package.json
+     * Referência: https://cli.vuejs.org/guide/cli-service.html#vue-cli-service-serve
+     */
+
+    // https: true
+  },
   publicPath: process.env.NODE_ENV === 'production'
     ? '/vue-vuetify-admin/'
     : '/',

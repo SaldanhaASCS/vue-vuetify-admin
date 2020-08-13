@@ -9,7 +9,7 @@ export const landingInfo = {
   title: 'Vue Vuetify Admin',
   email: 'example@mail.com',
   phone: '+79876543210',
-  address: 'Yekaterinburg'
+  address: 'Recife-PE'
 }
 
 export const userAdmin = {

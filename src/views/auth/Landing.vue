@@ -53,88 +53,86 @@
             </div>
           </v-col>
           <v-col cols="12">
-            <v-container>
-              <v-row align="enter">
-                <v-col
-                  cols="12"
-                  md="4"
-                >
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-center">
-                      <v-icon
-                        x-large
-                        class="blue--text text--lighten-2"
-                      >
-                        mdi-material-design
-                      </v-icon>
-                    </v-card-text>
-                    <v-card-title
-                      primary-title
-                      class="layout justify-center"
+            <v-row>
+              <v-col
+                cols="12"
+                md="4"
+              >
+                <v-card class="elevation-0 transparent">
+                  <v-card-text class="text-center">
+                    <v-icon
+                      x-large
+                      class="blue--text text--lighten-2"
                     >
-                      <div class="headline text-center">
-                        Material Design
-                      </div>
-                    </v-card-title>
-                    <v-card-text>
-                      {{ lorem }}
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-                <v-col
-                  cols="12"
-                  md="4"
-                >
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-center">
-                      <v-icon
-                        x-large
-                        class="blue--text text--lighten-2"
-                      >
-                        mdi-flash
-                      </v-icon>
-                    </v-card-text>
-                    <v-card-title
-                      primary-title
-                      class="layout justify-center"
+                      mdi-material-design
+                    </v-icon>
+                  </v-card-text>
+                  <v-card-title
+                    primary-title
+                    class="layout justify-center"
+                  >
+                    <div class="headline text-center">
+                      Material Design
+                    </div>
+                  </v-card-title>
+                  <v-card-text>
+                    {{ lorem }}
+                  </v-card-text>
+                </v-card>
+              </v-col>
+              <v-col
+                cols="12"
+                md="4"
+              >
+                <v-card class="elevation-0 transparent">
+                  <v-card-text class="text-center">
+                    <v-icon
+                      x-large
+                      class="blue--text text--lighten-2"
                     >
-                      <div class="headline">
-                        Fast development
-                      </div>
-                    </v-card-title>
-                    <v-card-text>
-                      {{ lorem }}
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-                <v-col
-                  cols="12"
-                  md="4"
-                >
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-center">
-                      <v-icon
-                        x-large
-                        class="blue--text text--lighten-2"
-                      >
-                        mdi-open-source-initiative
-                      </v-icon>
-                    </v-card-text>
-                    <v-card-title
-                      primary-title
-                      class="layout justify-center"
+                      mdi-flash
+                    </v-icon>
+                  </v-card-text>
+                  <v-card-title
+                    primary-title
+                    class="layout justify-center"
+                  >
+                    <div class="headline">
+                      Fast development
+                    </div>
+                  </v-card-title>
+                  <v-card-text>
+                    {{ lorem }}
+                  </v-card-text>
+                </v-card>
+              </v-col>
+              <v-col
+                cols="12"
+                md="4"
+              >
+                <v-card class="elevation-0 transparent">
+                  <v-card-text class="text-center">
+                    <v-icon
+                      x-large
+                      class="blue--text text--lighten-2"
                     >
-                      <div class="headline text-center">
-                        Completely Open Sourced
-                      </div>
-                    </v-card-title>
-                    <v-card-text>
-                      {{ lorem }}
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-              </v-row>
-            </v-container>
+                      mdi-open-source-initiative
+                    </v-icon>
+                  </v-card-text>
+                  <v-card-title
+                    primary-title
+                    class="layout justify-center"
+                  >
+                    <div class="headline text-center">
+                      Completely Open Sourced
+                    </div>
+                  </v-card-title>
+                  <v-card-text>
+                    {{ lorem }}
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
           </v-col>
         </v-row>
       </section>
@@ -224,7 +222,7 @@
                       </v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                      <v-list-item-title>{{ info.adres }}</v-list-item-title>
+                      <v-list-item-title>{{ info.address }}</v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
                   <v-list-item>
