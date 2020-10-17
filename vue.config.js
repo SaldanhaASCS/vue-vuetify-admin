@@ -16,6 +16,7 @@ module.exports = {
      */
 
     // https: true
+    disableHostCheck : true // Linha inserida porque estava dando erro "Invalid Host header" ao rodar com traefik. Aula 529 Plínio Naves.
   },
   publicPath: process.env.NODE_ENV === 'production'
     ? '/vue-vuetify-admin/'

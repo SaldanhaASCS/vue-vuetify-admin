@@ -37,12 +37,6 @@ Vue.use(Router)
 
 export const constantRoutes = [
   {
-    path: '/landing',
-    alias: '/land',
-    component: () => import('@/views/auth/Landing.vue'),
-    hidden: true
-  },
-  {
     path: '/',
     component: Layout,
     children: [
@@ -134,6 +128,7 @@ export const constantRoutes = [
 
 export default new Router({
   mode: 'history',
+  hash: false, // Remove # da url
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
 })

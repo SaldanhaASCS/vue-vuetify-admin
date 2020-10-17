@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+
+  reverse-proxy:
+    image: traefik:v2.3
+    container_name: ${PROJECT_NAME}_traefik
+    restart: unless-stopped
+    command: --api.dashboard=true --providers.docker
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # - ./traefik/traefik.toml:/etc/traefik/traefik.toml
+      # - ./traefik/certs/:/certs/
+    labels:
+      - traefik.http.routers.api.rule=Host(`traefik.${DOMAIN}`)
+      - traefik.http.routers.api.service=api@internal
+      - traefik.http.routers.api.middlewares=auth
+      - traefik.http.middlewares.auth.basicauth.users=admin:$$apr1$$.UXQp4ol$$6gtokhg9DGElo/.gBvwr20
+  
+  frontend:
+    build: .
+    container_name: ${PROJECT_NAME}_frontend
+    restart: unless-stopped
+    labels: 
+      - traefik.http.routers.frontend.rule=Host(`frontend.${DOMAIN}`)
+      restart: always
+      volumes:
+        - ./front/nginx/:/etc/nginx/conf.d/
+
+  # Versão do container para servir pelo o app sem o NGINX
+  # frontend:
+  #   build:
+  #     context: .
+  #     target: dev-stage
+  #   container_name: frontend
+  #   restart: unless-stopped
+  #   command: npm run serve
+  #   volumes:
+  #     - .:/usr/app
+  #     - /usr/app/node_modules
+  #   labels:
+  #     - traefik.http.services.frontend.loadbalancer.server.port=8080
+  #     - traefik.http.routers.frontend.rule=Host(`frontend.${DOMAIN}`)

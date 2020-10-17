@@ -23,6 +23,7 @@ router.beforeEach(async (to, from, next) => {
   try {
     // Route requires authentication?
     if (to.matched.some((record) => record.meta.requiresAuth)) {
+      logMsg += '\t[require authentication]'
       // User is authentication?
       if (store.getters.token) {
         logMsg += '\t[token]'
@@ -39,6 +40,8 @@ router.beforeEach(async (to, from, next) => {
         next(`/login?redirect=${to.path}`)
       }
     } else {
+      logMsg += '\t[!require authentication]'
+      console.log(from.path, to.path)
       next()
     }
   } catch (err) {
